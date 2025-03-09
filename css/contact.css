@@ -1,0 +1,44 @@
+/* ***************************************************************** 
+*	Media Query
+* ***************************************************************** */
+#contact-form .contact-form-container {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  gap: 32px;
+}
+#contact-form .contact-form-text {
+  color: #12A497;
+  line-height: 1.6;
+  font-size: 18px;
+}
+#contact-form .form-item {
+  margin-bottom: 32px;
+}
+#contact-form .form-item .form-header {
+  color: #12A497;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+#contact-form .form-item .form-header .required {
+  background-color: red;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+#contact-form .input {
+  padding: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  width: 100%;
+}
+#contact-form .submit {
+  background-color: #12A497;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}/*# sourceMappingURL=contact.css.map */

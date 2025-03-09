@@ -1,0 +1,45 @@
+@use "variable" as *;
+
+#contact-form {
+  .contact-form-container {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    display: grid;
+    gap: 32px;
+  }
+  .contact-form-text {
+    color: $main-color;
+    line-height: 1.6;
+    font-size: $font-size-p02;
+  }
+  .form-item {
+    margin-bottom: 32px;
+    .form-header {
+      color: $main-color;
+      font-size: $font-size-p03;
+      margin-bottom: 12px;
+      .required {
+        background-color: red;
+        color: $color-white;
+        font-size: $font-size-p04;
+        border-radius: 4px;
+        padding: 2px 4px;
+      }
+    }
+  }
+  .input {
+    padding: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  .submit {
+    background-color: $main-color;
+    color: $color-white;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $font-size-p02;
+    font-weight: $font-weight-medium;
+  }
+}
