@@ -553,12 +553,12 @@
           </div>
         </div>
         <div class="slider slider-container">
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img01.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img02.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img03.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img04.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img05.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img06.jpg'); ?>" alt="Offline image"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img01.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img02.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img03.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img04.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img05.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img06.jpg'); ?>" alt="Offline image" loading="lazy"></div>
         </div>
       </section>
 
