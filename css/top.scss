@@ -356,13 +356,13 @@
       li.feature-item {
         display: flex;
         @include max(sm) {
-          flex-direction: column-reverse;
+          flex-direction: column;
           gap: 16px;
         }
         &:nth-child(even) {
           flex-direction: row-reverse;
           @include max(sm) {
-            flex-direction: column-reverse;
+            flex-direction: column;
           }
         }
         .feature-item-child {
@@ -374,8 +374,10 @@
             .img {
               margin: 0 auto;
               width: 85%;
+              @include max(sm) {
+                width: 70%;
+              }
             }
-            // &-pc {}
           }
           &.feature-item-contents {
             display: flex;

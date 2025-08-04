@@ -42,7 +42,7 @@
             <li class="menu-item"><a href="<?php echo esc_url(home_url('/contact/')); ?>">CONTACT</a></li>
           </ul>
         </nav>
-        <div class="hamburger-menu">
+        <div class="hamburger-menu sub-page-humburger">
           <button class="hamburger-overlay" aria-label="メニュー" aria-controls="overlay-menu" aria-expanded="false">
             <span class="hamburger-overlay__line"></span>
             <span class="hamburger-overlay__line"></span>

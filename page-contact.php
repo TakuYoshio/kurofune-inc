@@ -12,8 +12,13 @@
     <section id="contact-form">
       <div class="contact-form-container">
         <div class="contact-form-text">
-          <p class="p-02">
+          <p class="p-02 pc">
             弊社サービスについてのご質問など、お気軽にご連絡ください。<br>
+            1 ～ 2 営業日以内に、担当者よりお返事いたします。
+          </p>
+          <p class="p-02 sp">
+            弊社サービスについてのご質問など、<br>
+            お気軽にご連絡ください。<br>
             1 ～ 2 営業日以内に、担当者よりお返事いたします。
           </p>
         </div>

@@ -638,17 +638,41 @@ section {
     align-items: center;
     flex-direction: column;
     gap: 12px;
+    @include max(md) {
+      padding: 64px 0;
+    }
+    @include max(sm) {
+      padding: 48px 0;
+    }
     &-jp {
       font-size: 32px;
       letter-spacing: 0.1em;
+      @include max(md) {
+        font-size: 28px;
+      }
+      @include max(sm) {
+        font-size: 24px;
+      }
     }
     &-en {
       font-size: $font-size-p02;
       letter-spacing: 0.1em;
+      @include max(md) {
+        font-size: $font-size-p02-tab;
+      }
+      @include max(sm) {
+        font-size: $font-size-p02-sp;
+      }
     }
   }
   .sub-fv-image {
     height: 420px;
+    @include max(md) {
+      height: 320px;
+    }
+    @include max(sm) {
+      height: 240px;
+    }
     & img {
       height: 100%;
     }
@@ -681,6 +705,11 @@ section {
   background-color: $color-white;
   transform: translateX(-50%);
   transition: all .6s;
+}
+.sub-page-humburger {
+  .hamburger-overlay__line {
+    background-color: $main-color;
+  }
 }
 
 .hamburger-overlay__line:nth-of-type(1) { top: 11px; }
