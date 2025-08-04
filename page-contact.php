@@ -12,11 +12,19 @@
     <section id="contact-form">
       <div class="contact-form-container">
         <div class="contact-form-text">
-          弊社サービスについてのご質問など、お気軽にご連絡ください。<br>
-          1 ～ 2 営業日以内に、担当者よりお返事いたします。
+          <p class="p-02">
+            弊社サービスについてのご質問など、お気軽にご連絡ください。<br>
+            1 ～ 2 営業日以内に、担当者よりお返事いたします。
+          </p>
         </div>
         <div class="contact-form">
-          
+          <!-- フォーム設置場所（例：body内の適当な位置） -->
+          <script src="https://js-na2.hsforms.net/forms/embed/43920249.js" defer></script>
+          <div class="hs-form-frame"
+              data-region="na2"
+              data-form-id="a797225a-ddb4-46ab-bfe3-28d33fcc941d"
+              data-portal-id="43920249">
+          </div>
         </div>
         <!-- <div class="contact-form">
           <?php echo do_shortcode( '[contact-form-7 id="b6eb11a" title="Contact-form"]' ); ?>

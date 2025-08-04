@@ -532,15 +532,10 @@
         <div class="slider slider-container">
           <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img01.jpg'); ?>" alt="Offline image"></div>
           <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img02.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img03.JPG'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img04.JPG'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img05.JPG'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img06.JPG'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img07.JPG'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img08.JPG'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img09.JPG'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img10.JPG'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img11.jpg'); ?>" alt="Offline image"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img03.jpg'); ?>" alt="Offline image"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img04.jpg'); ?>" alt="Offline image"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img05.jpg'); ?>" alt="Offline image"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img06.jpg'); ?>" alt="Offline image"></div>
         </div>
       </section>
 

@@ -1,6 +1,9 @@
 /* ***************************************************************** 
 *	Media Query
 * ***************************************************************** */
+#contact-form {
+  margin-bottom: 0;
+}
 #contact-form .contact-form-container {
   width: 100%;
   max-width: 780px;
@@ -11,7 +14,7 @@
 #contact-form .contact-form-text {
   color: #12A497;
   line-height: 1.6;
-  font-size: 18px;
+  text-align: center;
 }
 #contact-form .form-item {
   margin-bottom: 32px;

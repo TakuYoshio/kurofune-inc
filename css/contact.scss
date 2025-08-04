@@ -1,6 +1,7 @@
 @use "variable" as *;
 
 #contact-form {
+  margin-bottom: 0;
   .contact-form-container {
     width: 100%;
     max-width: 780px;
@@ -11,7 +12,7 @@
   .contact-form-text {
     color: $main-color;
     line-height: 1.6;
-    font-size: $font-size-p02;
+    text-align: center;
   }
   .form-item {
     margin-bottom: 32px;
