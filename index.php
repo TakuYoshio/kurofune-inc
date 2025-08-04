@@ -160,7 +160,7 @@
               まずはお気軽にお問い合わせください
             </div>
             <div class="cta-btn">
-              <a href="#" class="btn">
+              <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn">
                 <span>お問い合わせはこちら</span>
                 <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow" loading="lazy">
               </a>
@@ -391,7 +391,7 @@
               まずはお気軽にお問い合わせください
             </div>
             <div class="cta-btn">
-              <a href="#" class="btn">
+              <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn">
                 <span>お問い合わせはこちら</span>
                 <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow">
               </a>
