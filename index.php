@@ -329,7 +329,7 @@
                   <div class="feature-item-child feature-item-contents">
                     <div class="feature-title">
                       <div>
-                        <img src="<?php echo get_theme_file_uri('images/feature03.svg'); ?>" alt="Feature03" loading="lazy">
+                        <img src="<?php echo get_theme_file_uri('images/feature05.svg'); ?>" alt="Feature03" loading="lazy">
                         <h4>教育機能 <span class="preparing">（準備中）</span></h4>
                       </div>
                       <span class="line"></span>
@@ -553,12 +553,12 @@
           </div>
         </div>
         <div class="slider slider-container">
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img01.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img02.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img03.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img04.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img05.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img06.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img01.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img02.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img03.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img04.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img05.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img06.jpg'); ?>" alt="Offline image" loading="lazy"></div>
         </div>
       </section>
 
