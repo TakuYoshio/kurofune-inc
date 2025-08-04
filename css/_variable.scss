@@ -1,7 +1,22 @@
 $font-color-normal: #333;
 $color-white: #fff;
 $main-color: #12A497;
+$sub-color: #c8161d;
 $background-color-main: #fff;
+$background-color-sub: #f0fffa;
+$background-gradient: linear-gradient(
+  to bottom,
+  #12a497ff 0%,   /* 緑、上端から */
+  #12a497ff 60%,  /* 緑を60%まで伸ばす */
+  #e4f3f900 100%  /* そこから透明に */
+);
+$background-gradient-reverse: linear-gradient(
+  to bottom,
+  #e4f3f900 0%,   /* 透明上端から */
+  #12a49850 60%,  /* 透明を60%まで伸ばす */
+  #12a497ff 100%  /* 緑 */
+);
+$green-gradient: linear-gradient(to right, #62c0b4, #00a291);
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semi-bold: 600;

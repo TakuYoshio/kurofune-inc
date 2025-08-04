@@ -4,6 +4,13 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: $font-size-p02;
+  @include max(md) {
+    font-size: $font-size-p02-tab;
+  }
+  @include max(sm) {
+    font-size: $font-size-p02-sp;
+  }
 }
 
 .roboto {
@@ -25,6 +32,12 @@ body {
   font-style: normal;
 }
 
+.m-plus-1p-regular {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .wrap {
   overflow: hidden;
   width: 100%;
@@ -38,6 +51,7 @@ img {
 
 h1 {
   font-size: 56px;
+  font-weight: $font-weight-bold;
   @include max(md) {
     font-size: 40px;
   }
@@ -47,6 +61,9 @@ h1 {
 }
 h2 {
   font-size: 40px;
+  font-weight: $font-weight-bold;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
   @include max(md) {
     font-size: 32px;
   }
@@ -56,6 +73,8 @@ h2 {
 }
 h3 {
   font-size: 32px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
   @include max(md) {
     font-size: 28px;
   }
@@ -65,6 +84,8 @@ h3 {
 }
 h4 {
   font-size: 28px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
   @include max(md) {
     font-size: 24px;
   }
@@ -74,6 +95,8 @@ h4 {
 }
 h5 {
   font-size: 24px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
   @include max(md) {
     font-size: 20px;
   }
@@ -83,6 +106,8 @@ h5 {
 }
 h6 {
   font-size: 20px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
   @include max(md) {
     font-size: 16px;
   }
@@ -92,6 +117,8 @@ h6 {
 }
 p {
   font-size: $font-size-p02;
+  line-height: 1.8em;
+  letter-spacing: 0.05em;
   @include max(md) {
     font-size: $font-size-p02-tab;
   }
@@ -99,14 +126,78 @@ p {
     font-size: $font-size-p02-sp;
   }
 }
+p.p-01 {
+  font-size: $font-size-p01;
+  @include max(md) {
+    font-size: $font-size-p01-tab;
+  }
+  @include max(sm) {
+    font-size: $font-size-p01-sp;
+  }
+}
+p.p-02 {
+  font-size: $font-size-p02;
+  @include max(md) {
+    font-size: $font-size-p02-tab;
+  }
+  @include max(sm) {
+    font-size: $font-size-p02-sp;
+  }
+}
+p.p-03 {
+  font-size: $font-size-p03;
+  line-height: 1.6em;
+  letter-spacing: 0.05em;
+  @include max(md) {
+    font-size: $font-size-p03-tab;
+  }
+  @include max(sm) {
+    font-size: $font-size-p03-sp;
+  }
+}
+p.p-04 {
+  font-size: $font-size-p04;
+  @include max(md) {
+    font-size: $font-size-p04-tab;
+  }
+  @include max(sm) {
+    font-size: $font-size-p04-sp;
+  }
+}
 
 section {
   margin: 120px auto;
+  &.bg-main {
+    background-color: $background-color-main;
+  }
+  &.bg-sub {
+    background-color: $background-color-sub;
+  }
   @include max(md) {
     margin: 80px auto;
   }
   @include max(sm) {
     margin: 56px auto;
+  }
+  &.nomargin-padding {
+    margin: 0 auto;
+    padding: 104px 0;
+    @include max(md) {
+      padding: 80px 0;
+    }
+    @include max(sm) {
+      padding: 56px 0;
+    }
+  }
+  &.cta-padding {
+    margin: 0 auto;
+    padding: 64px 0;
+    @include max(md) {
+      padding: 48px 0;
+    }
+    @include max(sm) {
+      padding: 32px 0;
+    }
   }
 }
 
@@ -121,8 +212,28 @@ section {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
+.pc {
+  display: block;
+  @include max(sm) {
+    display: none;
+  }
+}
+.sp {
+  display: none;
+  @include max(sm) {
+    display: block;
+  }
+}
+
 // ========== BUTTONS ==========
 // ---------- Default ----------
+.btn-container {
+  margin-top: 40px;
+}
 .btn {
   width: 320px;
   padding: 24px;
@@ -130,11 +241,23 @@ section {
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  background-color: $color-white;
-  border: 1px solid $main-color;
   gap: 16px;
   cursor: pointer;
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  &.white {
+    background-color: $color-white;
+    border: 3px solid $main-color;
+    & > span {
+      color: $main-color;
+    }
+  }
+  &.green {
+    background-color: $main-color;
+    border: 3px solid $color-white;
+    & > span {
+      color: $color-white;
+    }
+  }
   &:hover {
     & > span {
       letter-spacing: 0.15em;
@@ -149,7 +272,6 @@ section {
     padding: 16px 24px;
   }
   & > span {
-    color: $main-color;
     font-size: $font-size-p02;
     font-weight: $font-weight-medium;
     cursor: pointer;
@@ -255,7 +377,7 @@ section {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
   @include max(xl) {
     padding: 0 6%;
@@ -328,6 +450,31 @@ section {
   @include max(sm) {
     padding: 56px 32px 24px;
   }
+  &.footer-obj {
+    position: relative;
+    .footer-obj {
+      position: absolute;
+      &.women {
+        width: 136px;
+        top: 50%;
+        left: 2%;
+        @include max(sm) {
+          width: 80px;
+          top: unset;
+          bottom: 4%;
+        }
+      }
+      &.ship {
+        width: 104px;
+        top: 50%;
+        right: 4%;
+        @include max(sm) {
+          width: 64px;
+          top: 10%;
+        }
+      }
+    }
+  }
   .footer-container {
     display: flex;
     justify-content: space-between;
@@ -337,6 +484,9 @@ section {
     @include max(md) {
       flex-direction: column;
       gap: 32px;
+    }
+    @include max(sm) {
+      gap: 24px;
     }
     .info {
       display: grid;
@@ -368,7 +518,8 @@ section {
             gap: 24px;
           }
           @include max(md-sm) {
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
             gap: 2px;
           }
           .menu-item {
@@ -399,32 +550,25 @@ section {
   }
 }
 
-// ========== CTA ==========
+// ========== CTA Footer==========
 #cta {
   width: 100%;
-  height: 280px;
-  @include max(md-sm) {
-    height: 320px;
-  }
+  height: auto;
+  background: $background-gradient-reverse;
   .cta-container {
     position: relative;
     width: 100%;
     height: 100%;
-  }
-  .cta-background {
-    width: 100%;
-    height: 100%;
-    & img {
-      height: 100%;
+    padding: 120px;
+    @include max(sm) {
+      padding: 16px 4% 56px;
     }
   }
   .cta-buttons {
-    position: absolute;
     display: flex;
     gap: 56px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
     @include max(lg-md) {
       gap: 32px;
     }
@@ -439,6 +583,37 @@ section {
     bottom: -2%;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+#cta-secondary {
+  background: $green-gradient;
+  color: $color-white;
+  .cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .cta-message {
+    text-align: center;
+    h5 {
+      line-height: 1.6em;
+    }
+  }
+  .cta-btn-container {
+    .cta-btn {
+      margin-top: 12px;
+      .btn {
+        background-color: $sub-color;
+        color: $color-white;
+        border: 2px solid $color-white;
+        padding: 16px 24px;
+        & > span {
+          color: $color-white;
+        }
+      }
+    }
   }
 }
 
@@ -575,8 +750,8 @@ section {
   @include max(md) {
   font-size: $font-size-p02-tab;
   padding: 16px;
-  }
-  @include max(sm) {
+}
+@include max(sm) {
   font-size: $font-size-p02-sp;
   padding: 12px;
   }
@@ -584,4 +759,127 @@ section {
 
 .nav-overlay__link:hover {
   color: #4a90e2;
+}
+
+// ========== 共通 セクションタイトル ==========
+.sec-title-container {
+  display: grid;
+  gap: 32px;
+  margin-bottom: 56px;
+  @include max(md) {
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @include max(sm) {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .sec-title-contents {
+    display: grid;
+    gap: 8px;
+    @include max(sm) {
+      gap: 4px;
+    }
+    .sec-title-en {
+      color: $main-color;
+    }
+    .sec-title-jp {
+      h2 {
+        font-family: "Mochiy Pop One", sans-serif; 
+        @include max(sm) {
+          font-size: 20px;
+        }
+        .emphasis {
+          font-size: 64px;
+          margin: 0 8px;
+          @include max(md) {
+            font-size: 56px;
+          }
+          @include max(sm) {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+  .sec-title-text {
+    width: fit-content;
+  }
+  &.simple {
+    display: flex;
+    align-items: flex-end;
+    .sec-title-contents {
+      width: fit-content;
+    }
+    .two-line {
+      width: 280px;
+      margin-top: 0;
+      margin-bottom: 8px;
+      @include max(md) {
+        width: 200px;
+      }
+      @include max(sm) {
+        width: 25%;
+      }
+    }
+  }
+  .two-line {
+    width: 100%;
+    height: 4px;
+    display: flex;
+    margin-top: 32px;
+    @include max(sm) {
+      margin-top: 24px;
+    }
+    span {
+      height: 4px;
+      width: 50%;
+    }
+    .green {
+      background-color: $main-color;
+    }
+    .red {
+      background-color: $sub-color;
+    }
+  }
+}
+
+// ========== ロゴ アニメーション ==========
+/* ローディング全体 */
+#loading {
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* ロゴアニメーション */
+.loading-logo img {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* フェードアウト用クラス */
+#loading.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

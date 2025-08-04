@@ -16,8 +16,11 @@
           1 ～ 2 営業日以内に、担当者よりお返事いたします。
         </div>
         <div class="contact-form">
-          <?php echo do_shortcode( '[contact-form-7 id="b6eb11a" title="Contact-form"]' ); ?>
+          
         </div>
+        <!-- <div class="contact-form">
+          <?php echo do_shortcode( '[contact-form-7 id="b6eb11a" title="Contact-form"]' ); ?>
+        </div> -->
       </div>
     </section>
   </main>
