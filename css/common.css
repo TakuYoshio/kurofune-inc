@@ -351,7 +351,7 @@ section.cta-padding {
 }
 @media (max-width: 460px) {
   .btn {
-    width: 240px;
+    width: 260px;
     padding: 16px 24px;
   }
 }

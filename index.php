@@ -14,7 +14,7 @@
                 <span class="mv-copy-03">トータルサポート</span>
               </h1>
             </div>
-            <a href="#" class="btn white">
+            <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn white">
               <span>お問い合わせはこちら</span>
               <img src="<?php echo get_theme_file_uri('images/arrow-green.svg'); ?>" alt="arrow">
             </a>
@@ -74,7 +74,7 @@
                   </div>
                   <div class="rounte-image">
                     <div class="rounte-image-content">
-                      <img src="<?php echo get_theme_file_uri('images/kurofune-app-mockup.png'); ?>" alt="KUROFUNE APP">
+                      <img src="<?php echo get_theme_file_uri('images/kurofune-app-mockup.png'); ?>" alt="KUROFUNE APP" loading="lazy">
                       <p class="p-03 m-plus-1p-regular">
                         「KUROFUNE」アプリ<br>
                         「WABISABI-JAPAN」
@@ -109,27 +109,27 @@
                       <div class="rounte-image-countries-img">
                         <ul>
                           <li class="countries-item">
-                            <img src="<?php echo get_theme_file_uri('images/Vietnam.svg'); ?>" alt="Vietnam">
+                            <img src="<?php echo get_theme_file_uri('images/Vietnam.svg'); ?>" alt="Vietnam" loading="lazy">
                             <p class="p-04">ベトナム</p>
                           </li>
                           <li class="countries-item">
-                            <img src="<?php echo get_theme_file_uri('images/Philippines.svg'); ?>" alt="Philippines">
+                            <img src="<?php echo get_theme_file_uri('images/Philippines.svg'); ?>" alt="Philippines" loading="lazy">
                             <p class="p-04">フィリピン</p>
                           </li>
                           <li class="countries-item">
-                            <img src="<?php echo get_theme_file_uri('images/srilanka.svg'); ?>" alt="srilanka">
+                            <img src="<?php echo get_theme_file_uri('images/srilanka.svg'); ?>" alt="srilanka" loading="lazy">
                             <p class="p-04">スリランカ</p>
                           </li>
                           <li class="countries-item">
-                            <img src="<?php echo get_theme_file_uri('images/Indonesia.svg'); ?>" alt="Indonesia">
+                            <img src="<?php echo get_theme_file_uri('images/Indonesia.svg'); ?>" alt="Indonesia" loading="lazy">
                             <p class="p-04">インドネシア</p>
                           </li>
                           <li class="countries-item">
-                            <img src="<?php echo get_theme_file_uri('images/Cambodia.svg'); ?>" alt="Cambodia">
+                            <img src="<?php echo get_theme_file_uri('images/Cambodia.svg'); ?>" alt="Cambodia" loading="lazy">
                             <p class="p-04">カンボジア</p>
                           </li>
                           <li class="countries-item">
-                            <img src="<?php echo get_theme_file_uri('images/nepal.svg'); ?>" alt="nepal">
+                            <img src="<?php echo get_theme_file_uri('images/nepal.svg'); ?>" alt="nepal" loading="lazy">
                             <p class="p-04">ネパール</p>
                           </li>
                         </ul>
@@ -139,7 +139,7 @@
                 </div>
               </div>
               <div class="service-route-flow">
-                <img src="<?php echo get_theme_file_uri('images/jinzai-flow.svg'); ?>" alt="人材紹介フロー">
+                <img src="<?php echo get_theme_file_uri('images/jinzai-flow.svg'); ?>" alt="人材紹介フロー" loading="lazy">
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@
             <div class="cta-btn">
               <a href="#" class="btn">
                 <span>お問い合わせはこちら</span>
-                <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow">
+                <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow" loading="lazy">
               </a>
             </div>
           </div>
@@ -197,7 +197,7 @@
                 </div>
               </div>
               <div class="app-img">
-                <img src="<?php echo get_theme_file_uri('images/App.png'); ?>" alt="KUROFUNE PASSPORT Mockup">
+                <img src="<?php echo get_theme_file_uri('images/App.png'); ?>" alt="KUROFUNE PASSPORT Mockup" loading="lazy">
               </div>
             </div>
             <div class="feature-list">
@@ -205,13 +205,13 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-chat.png'); ?>" alt="Chat Support">
+                      <img src="<?php echo get_theme_file_uri('images/feature-chat.png'); ?>" alt="Chat Support" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
                     <div class="feature-title">
                       <div>
-                        <img src="<?php echo get_theme_file_uri('images/feature01.svg'); ?>" alt="Feature01">
+                        <img src="<?php echo get_theme_file_uri('images/feature01.svg'); ?>" alt="Feature01" loading="lazy">
                         <h4>チャット機能</h4>
                       </div>
                       <span class="line"></span>
@@ -235,13 +235,13 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-buddy.png'); ?>" alt="同行依頼機能">
+                      <img src="<?php echo get_theme_file_uri('images/feature-buddy.png'); ?>" alt="同行依頼機能" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
                     <div class="feature-title">
                       <div>
-                        <img src="<?php echo get_theme_file_uri('images/feature02.svg'); ?>" alt="Feature02">
+                        <img src="<?php echo get_theme_file_uri('images/feature02.svg'); ?>" alt="Feature02" loading="lazy">
                         <h4>同行依頼機能</h4>
                       </div>
                       <span class="line"></span>
@@ -265,13 +265,13 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img feature-item-img-pc">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-dashboard.png'); ?>" alt="支援履歴の見える化">
+                      <img src="<?php echo get_theme_file_uri('images/feature-dashboard.png'); ?>" alt="支援履歴の見える化" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
                     <div class="feature-title">
                       <div>
-                        <img src="<?php echo get_theme_file_uri('images/feature03.svg'); ?>" alt="Feature03">
+                        <img src="<?php echo get_theme_file_uri('images/feature03.svg'); ?>" alt="Feature03" loading="lazy">
                         <h4>支援履歴の見える化</h4>
                       </div>
                       <span class="line"></span>
@@ -293,13 +293,13 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img feature-item-img-pc">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-document.png'); ?>" alt="書類自動生成機能（準備中）">
+                      <img src="<?php echo get_theme_file_uri('images/feature-document.png'); ?>" alt="書類自動生成機能（準備中）" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
                     <div class="feature-title">
                       <div>
-                        <img src="<?php echo get_theme_file_uri('images/feature04.svg'); ?>" alt="Feature04">
+                        <img src="<?php echo get_theme_file_uri('images/feature04.svg'); ?>" alt="Feature04" loading="lazy">
                         <h4>書類自動生成機能 <span class="preparing">（準備中）</span></h4>
                       </div>
                       <span class="line"></span>
@@ -323,13 +323,13 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-learning.png'); ?>" alt="教育機能">
+                      <img src="<?php echo get_theme_file_uri('images/feature-learning.png'); ?>" alt="教育機能" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
                     <div class="feature-title">
                       <div>
-                        <img src="<?php echo get_theme_file_uri('images/feature03.svg'); ?>" alt="Feature03">
+                        <img src="<?php echo get_theme_file_uri('images/feature03.svg'); ?>" alt="Feature03" loading="lazy">
                         <h4>教育機能 <span class="preparing">（準備中）</span></h4>
                       </div>
                       <span class="line"></span>
@@ -364,8 +364,8 @@
                 </div>
               </div>
               <div class="price-list">
-                <img src="<?php echo get_theme_file_uri('images/price.png'); ?>" alt="料金表" class="pc">
-                <img src="<?php echo get_theme_file_uri('images/price-sp.png'); ?>" alt="料金表" class="sp">
+                <img src="<?php echo get_theme_file_uri('images/price.png'); ?>" alt="料金表" class="pc" loading="lazy">
+                <img src="<?php echo get_theme_file_uri('images/price-sp.png'); ?>" alt="料金表" class="sp" loading="lazy">
                 <div class="caution">
                   <p class="p-04">
                     ※「KUROFUNE PASSPORT」による管理を依頼した場合のみ紹介料金0円になる<br>
@@ -523,7 +523,7 @@
               </div>
             </div>
             <div class="company-map-img">
-              <img src="<?php echo get_theme_file_uri('images/Japan-map.png'); ?>" alt="Company Map">
+              <img src="<?php echo get_theme_file_uri('images/Japan-map.png'); ?>" alt="Company Map" loading="lazy">
             </div>
           </div>
         </div>
@@ -553,12 +553,12 @@
           </div>
         </div>
         <div class="slider slider-container">
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img01.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img02.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img03.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img04.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img05.jpg'); ?>" alt="Offline image"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img06.jpg'); ?>" alt="Offline image"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img01.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img02.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img03.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img04.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img05.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline/offline-img06.jpg'); ?>" alt="Offline image" loading="lazy"></div>
         </div>
       </section>
 
@@ -601,10 +601,10 @@
             </div>
             <div class="concept-img layout-flex-child">
               <div class="concept-img01">
-                <img src="<?php echo get_theme_file_uri('images/Concept-img01.jpg'); ?>" alt="Concept image">
+                <img src="<?php echo get_theme_file_uri('images/Concept-img01.jpg'); ?>" alt="Concept image" loading="lazy">
               </div>
               <div class="concept-img02">
-                <img src="<?php echo get_theme_file_uri('images/Concept-img02.jpg'); ?>" alt="Concept image">
+                <img src="<?php echo get_theme_file_uri('images/Concept-img02.jpg'); ?>" alt="Concept image" loading="lazy">
               </div>
             </div>
           </div>
@@ -636,7 +636,7 @@
                 <li class="news-item">
                   <a href="https://prtimes.jp/main/html/rd/p/000000007.000048531.html" class="news-link" target="_blank">
                     <div class="news-thumbnail">
-                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250724.jpg'); ?>" alt="News thumbnail">
+                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250724.jpg'); ?>" alt="News thumbnail" loading="lazy">
                     </div>
                     <div class="news-text">
                       <div class="news-date">2025.07.24</div>
@@ -654,7 +654,7 @@
                 <li class="news-item">
                   <a href="https://prtimes.jp/main/html/rd/p/000000006.000048531.html" class="news-link" target="_blank">
                     <div class="news-thumbnail">
-                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250523.jpg'); ?>" alt="News thumbnail">
+                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250523.jpg'); ?>" alt="News thumbnail" loading="lazy">
                     </div>
                     <div class="news-text">
                       <div class="news-date">2025.05.23</div>
@@ -672,7 +672,7 @@
                 <li class="news-item">
                   <a href="https://prtimes.jp/main/html/rd/p/000000006.000048531.html" class="news-link" target="_blank">
                     <div class="news-thumbnail">
-                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250415.jpg'); ?>" alt="News thumbnail">
+                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250415.jpg'); ?>" alt="News thumbnail" loading="lazy">
                     </div>
                     <div class="news-text">
                       <div class="news-date">2025.04.15</div>
@@ -691,7 +691,7 @@
               <div class="btn-container">
                 <a href="https://prtimes.jp/main/html/searchrlp/company_id/48531" class="btn green" target="_blank">
                   <span>ニュース一覧はこちら</span>
-                  <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow">
+                  <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow" loading="lazy">
                 </a>
               </div>
             </div>
