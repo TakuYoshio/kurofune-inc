@@ -49,12 +49,16 @@ $(function(){
     ]
   });
 
-  // 各画像が読み込まれた後に slick の再レイアウトを指示
+  // 初期化直後に少し遅延してsetPositionを呼ぶ
+  setTimeout(function() {
+    $('.slider').slick('setPosition');
+  }, 300);
+
+  // 画像が読み込まれたら毎回setPositionを呼ぶ
   $('.slider img').on('load', function () {
     $('.slider').slick('setPosition');
   });
 });
-
 
 // ローディング アニメーション
 window.addEventListener('load', function () {

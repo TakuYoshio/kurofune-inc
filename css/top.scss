@@ -624,13 +624,18 @@
     }
   }
   .slider-container {
+    overflow: hidden; // 追加（親に指定）
     .slider-item {
+      width: auto;     // 追加：variableWidth対応
+      display: inline-block; // 追加：崩れ防止
       height: 400px;
       @include max(sm) {
         height: 220px;
       }
       img {
         height: 100%;
+        width: auto;   // 追加：画像比率維持で崩れを防止
+        display: block; // 追加：iOSでのimg空白回避
       }
     }
   }

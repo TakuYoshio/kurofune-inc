@@ -700,7 +700,12 @@
 #offline .sec-title-container .sec-title-text .two-line {
   margin-top: 0;
 }
+#offline .slider-container {
+  overflow: hidden;
+}
 #offline .slider-container .slider-item {
+  width: auto;
+  display: inline-block;
   height: 400px;
 }
 @media (max-width: 460px) {
@@ -710,6 +715,8 @@
 }
 #offline .slider-container .slider-item img {
   height: 100%;
+  width: auto;
+  display: block;
 }
 
 .layout-flex {
