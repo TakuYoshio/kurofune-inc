@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-$(window).on('load', function() {
+$(function(){
   $('.slider').slick({
     autoplay: true,
     autoplaySpeed: 0,
@@ -47,6 +47,11 @@ $(window).on('load', function() {
         }
       }
     ]
+  });
+
+  // 各画像が読み込まれた後に slick の再レイアウトを指示
+  $('.slider img').on('load', function () {
+    $('.slider').slick('setPosition');
   });
 });
 
