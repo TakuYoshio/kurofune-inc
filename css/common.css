@@ -2,6 +2,48 @@
 /* ***************************************************************** 
 *	Media Query
 * ***************************************************************** */
+@font-face {
+  font-family: "SourceHanSansJP";
+  src: url("../font/SourceHanSansJP-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansJP";
+  src: url("../font/SourceHanSansJP-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansJP";
+  src: url("../font/SourceHanSansJP-Normal.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansJP";
+  src: url("../font/SourceHanSansJP-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansJP";
+  src: url("../font/SourceHanSansJP-Medium.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansJP";
+  src: url("../font/SourceHanSansJP-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansJP";
+  src: url("../font/SourceHanSansJP-Heavy.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
@@ -1022,7 +1064,8 @@ section.cta-padding {
   color: #12A497;
 }
 .sec-title-container .sec-title-contents .sec-title-jp h2 {
-  font-family: "Mochiy Pop One", sans-serif;
+  font-family: "SourceHanSansJP", sans-serif;
+  font-weight: 800;
 }
 @media (max-width: 460px) {
   .sec-title-container .sec-title-contents .sec-title-jp h2 {
