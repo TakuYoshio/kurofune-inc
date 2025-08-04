@@ -582,10 +582,16 @@ section.cta-padding {
   top: 50%;
   left: 2%;
 }
+@media (max-width: 768px) {
+  #footer.footer-obj .footer-obj.women {
+    width: 112px;
+    top: unset;
+    bottom: 0%;
+  }
+}
 @media (max-width: 460px) {
   #footer.footer-obj .footer-obj.women {
     width: 80px;
-    top: unset;
     bottom: 4%;
   }
 }
@@ -593,6 +599,11 @@ section.cta-padding {
   width: 104px;
   top: 50%;
   right: 4%;
+}
+@media (max-width: 768px) {
+  #footer.footer-obj .footer-obj.ship {
+    width: 80px;
+  }
 }
 @media (max-width: 460px) {
   #footer.footer-obj .footer-obj.ship {
@@ -607,7 +618,7 @@ section.cta-padding {
   max-width: 1020px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 679px) {
   #footer .footer-container {
     flex-direction: column;
     gap: 32px;
@@ -703,6 +714,11 @@ section.cta-padding {
   width: 100%;
   height: 100%;
   padding: 120px;
+}
+@media (max-width: 768px) {
+  #cta .cta-container {
+    padding: 24px 4% 80px;
+  }
 }
 @media (max-width: 460px) {
   #cta .cta-container {
@@ -924,7 +940,6 @@ section.cta-padding {
 }
 @media (max-width: 460px) {
   .nav-overlay__link {
-    font-size: 14px;
     padding: 12px;
   }
 }
@@ -1051,7 +1066,13 @@ section.cta-padding {
 /* ロゴアニメーション */
 .loading-logo img {
   opacity: 0;
+  width: 120px;
   animation: fadeIn 1.5s ease forwards;
+}
+@media (max-width: 460px) {
+  .loading-logo img {
+    width: 64px;
+  }
 }
 
 @keyframes fadeIn {

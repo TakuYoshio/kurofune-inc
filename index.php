@@ -217,10 +217,16 @@
                       <span class="line"></span>
                     </div>
                     <div class="feature-text">
-                      <p class="p-02">
+                      <p class="p-02 pc">
                         外国人労働者が日常生活や仕事で感じる困りごとを、<br>
                         いつでも気軽に相談できるチャット機能を搭載。<br>
                         言語や文化の壁を越えて、安心して<br>
+                        サポートを受けられる環境を提供します。
+                      </p>
+                      <p class="p-02 sp">
+                        外国人労働者が日常生活や仕事で感じる困りごとを、
+                        いつでも気軽に相談できるチャット機能を搭載。<br>
+                        言語や文化の壁を越えて、安心して
                         サポートを受けられる環境を提供します。
                       </p>
                     </div>
@@ -241,10 +247,16 @@
                       <span class="line"></span>
                     </div>
                     <div class="feature-text">
-                      <p class="p-02">
+                      <p class="p-02 pc">
                         役所での手続きや銀行での口座開設など、<br>
                         慣れない場面での不安をサポート。<br>
                         アプリから簡単に同行依頼ができ、<br>
+                        慣れない日本の生活もしっかりフォローします。
+                      </p>
+                      <p class="p-02 sp">
+                        役所での手続きや銀行での口座開設など、
+                        慣れない場面での不安をサポート。<br>
+                        アプリから簡単に同行依頼ができ、
                         慣れない日本の生活もしっかりフォローします。
                       </p>
                     </div>
@@ -265,9 +277,14 @@
                       <span class="line"></span>
                     </div>
                     <div class="feature-text">
-                      <p class="p-02">
+                      <p class="p-02 pc">
                         管理画面で支援内容や対応履歴を一元管理。<br>
                         外国人の困りごとや支援ニーズを見える化することで、<br>
+                        適切かつ迅速な対応が可能になります。
+                      </p>
+                      <p class="p-02 sp">
+                        管理画面で支援内容や対応履歴を一元管理。<br>
+                        外国人の困りごとや支援ニーズを見える化することで、
                         適切かつ迅速な対応が可能になります。
                       </p>
                     </div>
@@ -288,10 +305,16 @@
                       <span class="line"></span>
                     </div>
                     <div class="feature-text">
-                      <p class="p-02">
+                      <p class="p-02 pc">
                         在留カードや契約書などの各種書類について、<br>
                         更新期限が近づくと自動でアラート通知を送信。<br>
                         人事・労務担当者の手間を減らし、<br>
+                        うっかりミスや更新忘れを防ぎます。
+                      </p>
+                      <p class="p-02 sp">
+                        在留カードや契約書などの各種書類について、
+                        更新期限が近づくと自動でアラート通知を送信。<br>
+                        人事・労務担当者の手間を減らし、
                         うっかりミスや更新忘れを防ぎます。
                       </p>
                     </div>
@@ -569,12 +592,12 @@
                   日本を「開国」していきます。<br>
                 </p>
               </div>
-              <div class="concept-btn">
+              <!-- <div class="concept-btn">
                 <a href="#" class="btn green">
                   <span>会社概要はこちら</span>
                   <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow">
                 </a>
-              </div>
+              </div> -->
             </div>
             <div class="concept-img layout-flex-child">
               <div class="concept-img01">
