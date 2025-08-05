@@ -1,0 +1,80 @@
+@use "variable" as *;
+
+#company-profile {
+  .company-profile-container {
+    padding: 80px;
+    background-color: $background-color-sub;
+    border-radius: 40px;
+    @include max(sm) {
+      padding: 40px 16px;
+    }
+    table {
+      tbody {
+        tr {
+          line-height: 1.8;
+          @include max(sm) {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 24px 12px;
+            border-bottom: 2px solid $main-color;
+            font-size: 13px;
+          }
+          &:first-child {
+            th {
+              padding-top: 0;
+            }
+            td {
+              padding-top: 0;
+            }
+          }
+          th {
+            letter-spacing: 0.2em;
+            width: 20%;
+            padding: 32px 16px;
+            border-bottom: 2px solid $main-color;
+            @include max(sm) {
+              width: 100%;
+              padding: 0;
+              border-bottom: 0;
+            }
+          }
+          td {
+            width: 80%;
+            padding: 32px 16px;
+            border-bottom: 2px solid #cdcdcd;
+            letter-spacing: 0.05em;
+            @include max(sm) {
+              width: 100%;
+              padding: 0;
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#access {
+  .custom-map-wrapper {
+    width: 100%;
+    height: 400px;
+    // aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    @include max(md) {
+      height: 320px;
+    }
+    @include max(sm) {
+      height: 240px;
+    }
+  }
+
+  .custom-map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

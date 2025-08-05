@@ -592,12 +592,12 @@
                   日本を「開国」していきます。<br>
                 </p>
               </div>
-              <!-- <div class="concept-btn">
-                <a href="#" class="btn green">
+              <div class="concept-btn">
+                <a href="<?php echo esc_url(home_url('/company/')); ?>" class="btn green">
                   <span>会社概要はこちら</span>
                   <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow">
                 </a>
-              </div> -->
+              </div>
             </div>
             <div class="concept-img layout-flex-child">
               <div class="concept-img01">

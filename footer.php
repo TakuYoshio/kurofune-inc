@@ -45,11 +45,11 @@
         <div class="footer-menu">
           <div class="menu">
             <ul>
-              <!-- <li class="menu-item"><a href="<?php echo esc_url(home_url('/company/')); ?>">
+              <li class="menu-item"><a href="<?php echo esc_url(home_url('/company/')); ?>">
                 <p class="p-03">
-                  KUROFUNEについて
+                  会社概要
                 </p>
-              </a></li> -->
+              </a></li>
               <li class="menu-item"><a href="https://prtimes.jp/main/html/searchrlp/company_id/48531" target="_blank">
                 <p class="p-03">
                   新着情報
