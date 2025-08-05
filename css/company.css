@@ -22,6 +22,7 @@
     padding: 24px 12px;
     border-bottom: 2px solid #12A497;
     font-size: 13px;
+    line-height: 1.4;
   }
 }
 #company-profile .company-profile-container table tbody tr:first-child th {
