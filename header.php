@@ -37,7 +37,7 @@
         <nav class="header-nav sub-page">
           <ul>
             <li class="menu-item"><a href="<?php echo esc_url(home_url('/company/')); ?>">COMPANY</a></li>
-            <li class="menu-item"><a href="https://prtimes.jp/main/html/searchrlp/company_id/48531" target="_blank">NEWS</a></li>
+            <li class="menu-item"><a href="<?php echo esc_url(home_url('/news/')); ?>">NEWS</a></li>
             <li class="menu-item"><a href="https://www.wantedly.com/companies/kurofune-inc" target="_blank">RECRUIT</a></li>
             <li class="menu-item"><a href="<?php echo esc_url(home_url('/contact/')); ?>">CONTACT</a></li>
           </ul>
@@ -54,7 +54,7 @@
               <ul class="nav-overlay__list">
                 <li class="nav-overlay__item"><a href="/" class="nav-overlay__link">HOME</a></li>
                 <li class="nav-overlay__item"><a href="<?php echo esc_url(home_url('/company/')); ?>" class="nav-overlay__link">COMPANY</a></li>
-                <li class="nav-overlay__item"><a href="https://prtimes.jp/main/html/searchrlp/company_id/48531" target="_blank" class="nav-overlay__link">NEWS</a></li>
+                <li class="nav-overlay__item"><a href="<?php echo esc_url(home_url('/news/')); ?>" class="nav-overlay__link">NEWS</a></li>
                 <li class="nav-overlay__item"><a href="https://www.wantedly.com/companies/kurofune-inc" class="nav-overlay__link">RECRUIT</a></li>
                 <li class="nav-overlay__item"><a href="<?php echo esc_url(home_url('/contact/')); ?>" class="nav-overlay__link">CONTACT</a></li>
               </ul>
