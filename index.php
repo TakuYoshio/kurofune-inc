@@ -632,7 +632,7 @@
               </div>
             </div>
             <div class="news-contents">
-              <ul>
+              <!-- <ul>
                 <li class="news-item">
                   <a href="https://prtimes.jp/main/html/rd/p/000000007.000048531.html" class="news-link" target="_blank">
                     <div class="news-thumbnail">
@@ -687,9 +687,46 @@
                     </div>
                   </a>
                 </li>
-              </ul>
+              </ul> -->
+              <!-- 新着情報 -->
+              <?php
+              $args = array(
+                'post_type' => 'news',
+                'posts_per_page' => 3,
+                'meta_key'       => 'date',      // ACFの日付フィールド名
+                'orderby'        => 'meta_value',
+                'order'          => 'DESC',
+                'meta_type'      => 'DATE',      // 日付として並び替え
+              );
+              $the_query = new WP_Query($args);
+              ?>
+
+              <?php if ($the_query->have_posts()) : ?>
+                <ul class="news-list">
+                  <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <?php 
+                      $date = get_field('date'); // ACFの日付フィールド
+                      $link = get_field('news-link'); // ACFのリンクフィールド
+                    ?>
+                    <li class="news-item">
+                      <a class="news-link" href="<?php echo esc_url($link ? $link : get_permalink()); ?>" target="_blank" rel="noopener">
+                        <?php if ($date): ?>
+                          <span class="news-date"><?php echo esc_html($date); ?></span>
+                        <?php endif; ?>
+                        <span class="news-title"><?php the_title(); ?></span>
+                      </a>
+                    </li>
+                  <?php endwhile; ?>
+                </ul>
+                <?php wp_reset_postdata(); ?>
+              <?php else: ?>
+                <div>
+                  <p>新着情報はありません。</p>
+                </div>
+              <?php endif; ?>
+              <!-- 新着情報 -->
               <div class="btn-container">
-                <a href="https://prtimes.jp/main/html/searchrlp/company_id/48531" class="btn green" target="_blank">
+                <a href="<?php echo esc_url(home_url('/news/')); ?>" class="btn green">
                   <span>ニュース一覧はこちら</span>
                   <img src="<?php echo get_theme_file_uri('images/arrow-white.svg'); ?>" alt="arrow" loading="lazy">
                 </a>

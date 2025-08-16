@@ -935,6 +935,31 @@ section {
   }
 }
 
+// ========== ニュース・メディア ==========
+.news-contents {
+width: 95%;
+margin: 0 auto;
+  .news-list {
+    display: grid;
+    gap: 32px;
+    .news-item {
+      padding: 0 24px 32px;
+      border-bottom: 2px solid $main-color;
+      .news-link {
+        display: flex;
+        gap: 64px;
+        &:hover {
+          color: $main-color;
+        }
+        .news-date {
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+}
+
+
 // ========== ロゴ アニメーション ==========
 /* ローディング全体 */
 #loading {

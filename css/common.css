@@ -1139,6 +1139,29 @@ section.cta-padding {
   background-color: #c8161d;
 }
 
+.news-contents {
+  width: 95%;
+  margin: 0 auto;
+}
+.news-contents .news-list {
+  display: grid;
+  gap: 32px;
+}
+.news-contents .news-list .news-item {
+  padding: 0 24px 32px;
+  border-bottom: 2px solid #12A497;
+}
+.news-contents .news-list .news-item .news-link {
+  display: flex;
+  gap: 64px;
+}
+.news-contents .news-list .news-item .news-link:hover {
+  color: #12A497;
+}
+.news-contents .news-list .news-item .news-link .news-date {
+  letter-spacing: 0.05em;
+}
+
 /* ローディング全体 */
 #loading {
   position: fixed;
