@@ -972,6 +972,13 @@ margin: 0 auto;
         }
         .news-date {
           letter-spacing: 0.05em;
+          @include max(sm) {
+            font-size: 12px;
+            font-weight: $font-weight-bold;
+          }
+        }
+        .news-title {
+          line-height: 1.6;
         }
       }
     }

@@ -1192,6 +1192,15 @@ section.cta-padding {
 .news-contents .news-list .news-item .news-link .news-date {
   letter-spacing: 0.05em;
 }
+@media (max-width: 460px) {
+  .news-contents .news-list .news-item .news-link .news-date {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+.news-contents .news-list .news-item .news-link .news-title {
+  line-height: 1.6;
+}
 
 /* ローディング全体 */
 #loading {
