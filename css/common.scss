@@ -937,8 +937,11 @@ section {
 
 // ========== ニュース・メディア ==========
 .news-contents {
-width: 95%;
-margin: 0 auto;
+  width: 95%;
+  margin: 0 auto;
+  @include max(sm) {
+    width: 100%;
+  }
   .news-list {
     display: grid;
     gap: 32px;

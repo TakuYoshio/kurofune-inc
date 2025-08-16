@@ -725,90 +725,86 @@
 
 // ========== News ==========
 #news {
-   .news-contents {
-    width: 95%;
-    margin: 0 auto;
-    // ul {
-    //   display: flex;
-    //   gap: 40px;
-    //   @include max(md-sm) {
-    //     flex-direction: column;
-    //     align-items: center;
-    //   }
-    //   @include max(sm) {
-    //     gap: 32px;
-    //   }
-    //   .news-item {
-    //     width: calc(100% / 3);
-    //     @include max(md) {
-    //       width: 80%;
-    //     }
-    //     @include max(sm) {
-    //       width: 100%;
-    //       gap: 16px;
-    //     }
-    //     .news-link {
-    //       display: grid;
-    //       gap: 24px;
-    //       @include max(sm) {
-    //         gap: 12px;
-    //       }
-    //     }
-    //     .news-thumbnail {
-    //       border-radius: 16px;
-    //       border: 1px solid #dcdcdc;
-    //       overflow: hidden;
-    //     }
-    //     .news-text {
-    //       .news-date {
-    //         color: $main-color;
-    //         font-size: $font-size-p04;
-    //         margin-bottom: 16px;
-    //         @include max(md) {
-    //           font-size: $font-size-p04-tab;
-    //         }
-    //         @include max(sm) {
-    //           font-size: $font-size-p04-sp;
-    //           margin-bottom: 8px;
-    //         }
-    //       }
-    //       .news-title {
-    //         font-size: $font-size-p02;
-    //         font-weight: $font-weight-bold;
-    //         margin-bottom: 8px;
-    //         line-height: 1.6;
-    //         display: -webkit-box;
-    //         -webkit-box-orient: vertical;
-    //         -webkit-line-clamp: 1;
-    //         overflow: hidden;
-    //         @include max(md) {
-    //           font-size: $font-size-p02-tab;
-    //         }
-    //         @include max(sm) {
-    //           font-size: $font-size-p02-sp;
-    //           margin-bottom: 4px;
-    //         }
-    //       }
-    //       .news-desc {
-    //         font-size: $font-size-p03;
-    //         display: -webkit-box;
-    //         -webkit-box-orient: vertical;
-    //         -webkit-line-clamp: 2;
-    //         overflow: hidden;
-    //         p {
-    //           line-height: 1.8;
-    //         }
-    //         @include max(md) {
-    //           font-size: $font-size-p03-tab;
-    //         }
-    //         @include max(sm) {
-    //           font-size: $font-size-p03-sp;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-   }
+  // ul {
+  //   display: flex;
+  //   gap: 40px;
+  //   @include max(md-sm) {
+  //     flex-direction: column;
+  //     align-items: center;
+  //   }
+  //   @include max(sm) {
+  //     gap: 32px;
+  //   }
+  //   .news-item {
+  //     width: calc(100% / 3);
+  //     @include max(md) {
+  //       width: 80%;
+  //     }
+  //     @include max(sm) {
+  //       width: 100%;
+  //       gap: 16px;
+  //     }
+  //     .news-link {
+  //       display: grid;
+  //       gap: 24px;
+  //       @include max(sm) {
+  //         gap: 12px;
+  //       }
+  //     }
+  //     .news-thumbnail {
+  //       border-radius: 16px;
+  //       border: 1px solid #dcdcdc;
+  //       overflow: hidden;
+  //     }
+  //     .news-text {
+  //       .news-date {
+  //         color: $main-color;
+  //         font-size: $font-size-p04;
+  //         margin-bottom: 16px;
+  //         @include max(md) {
+  //           font-size: $font-size-p04-tab;
+  //         }
+  //         @include max(sm) {
+  //           font-size: $font-size-p04-sp;
+  //           margin-bottom: 8px;
+  //         }
+  //       }
+  //       .news-title {
+  //         font-size: $font-size-p02;
+  //         font-weight: $font-weight-bold;
+  //         margin-bottom: 8px;
+  //         line-height: 1.6;
+  //         display: -webkit-box;
+  //         -webkit-box-orient: vertical;
+  //         -webkit-line-clamp: 1;
+  //         overflow: hidden;
+  //         @include max(md) {
+  //           font-size: $font-size-p02-tab;
+  //         }
+  //         @include max(sm) {
+  //           font-size: $font-size-p02-sp;
+  //           margin-bottom: 4px;
+  //         }
+  //       }
+  //       .news-desc {
+  //         font-size: $font-size-p03;
+  //         display: -webkit-box;
+  //         -webkit-box-orient: vertical;
+  //         -webkit-line-clamp: 2;
+  //         overflow: hidden;
+  //         p {
+  //           line-height: 1.8;
+  //         }
+  //         @include max(md) {
+  //           font-size: $font-size-p03-tab;
+  //         }
+  //         @include max(sm) {
+  //           font-size: $font-size-p03-sp;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
    .btn {
     margin: 0 auto;
    }

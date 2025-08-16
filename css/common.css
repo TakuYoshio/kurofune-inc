@@ -1143,6 +1143,11 @@ section.cta-padding {
   width: 95%;
   margin: 0 auto;
 }
+@media (max-width: 460px) {
+  .news-contents {
+    width: 100%;
+  }
+}
 .news-contents .news-list {
   display: grid;
   gap: 32px;
