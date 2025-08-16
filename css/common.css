@@ -1183,7 +1183,7 @@ section.cta-padding {
 @media (max-width: 460px) {
   .news-contents .news-list .news-item .news-link {
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
   }
 }
 .news-contents .news-list .news-item .news-link:hover {
@@ -1200,6 +1200,10 @@ section.cta-padding {
 }
 .news-contents .news-list .news-item .news-link .news-title {
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 /* ローディング全体 */
