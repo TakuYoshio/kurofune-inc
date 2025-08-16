@@ -942,12 +942,31 @@ margin: 0 auto;
   .news-list {
     display: grid;
     gap: 32px;
+    @include max(md) {
+      gap: 24px;
+    }
+    @include max(sm) {
+      gap: 20px;
+    }
     .news-item {
       padding: 0 24px 32px;
       border-bottom: 2px solid $main-color;
+      @include max(md) {
+        padding: 0 20px 24px;
+      }
+      @include max(sm) {
+        padding: 0 16px 20px;
+      }
       .news-link {
         display: flex;
         gap: 64px;
+        @include max(md) {
+          gap: 56px;
+        }
+        @include max(sm) {
+          flex-direction: column;
+          gap: 8px;
+        }
         &:hover {
           color: $main-color;
         }
