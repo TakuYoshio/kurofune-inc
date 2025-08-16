@@ -25,6 +25,9 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
   <title><?php echo bloginfo('name'); ?></title>
   <meta name="description" content="<?php bloginfo('description'); ?>">
+  <link rel="icon" href="<?php echo get_theme_file_uri('images/favicon/favicon.ico'); ?>" sizes="32x32">
+  <link rel="icon" href="<?php echo get_theme_file_uri('images/favicon/favicon.svg'); ?>" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="<?php echo get_theme_file_uri('images/favicon/apple-touch-icon.png'); ?>">
   <?php wp_head(); ?>
 </head>
 <body>
