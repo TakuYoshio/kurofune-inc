@@ -983,6 +983,9 @@ margin: 0 auto;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 1;
           overflow: hidden;
+          @include max(sm) {
+            -webkit-line-clamp: 2;
+          }
         }
       }
     }

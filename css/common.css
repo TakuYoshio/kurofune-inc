@@ -1205,6 +1205,11 @@ section.cta-padding {
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
+@media (max-width: 460px) {
+  .news-contents .news-list .news-item .news-link .news-title {
+    -webkit-line-clamp: 2;
+  }
+}
 
 /* ローディング全体 */
 #loading {
