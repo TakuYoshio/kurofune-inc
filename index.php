@@ -9,7 +9,7 @@
                 <img src="<?php echo get_theme_file_uri('images/KUROFUNE-text.svg'); ?>" alt="KUROFUNE">
               </div>
               <h1 class="mv-copy">
-                <span class="mv-copy-01">「特定技能」労働者の</span>
+                <span class="mv-copy-01">「特定技能」労働者のテスト</span>
                 <span class="mv-copy-02">採用から定着まで、</span>
                 <span class="mv-copy-03">トータルサポート</span>
               </h1>
