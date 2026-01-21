@@ -31,7 +31,7 @@
                   <tr>
                     <th>所在地</th>
                     <td>
-                      （本社）愛知県名古屋市西区2-14-1　なごのキャンパス2-10<br> 
+                      （本社）〒460-0008 愛知県名古屋市中区栄1-10-29 伏見FGビルディング8階<br> 
                       （支店）静岡県浜松市中央区　ザザシティ浜松中央館B1階（FUSE）<br>
                       （拠点）東京都千代田区 Spaces大手町<br>
                       （拠点）愛媛県今治市 ライブタウン宝来803<br>
@@ -107,7 +107,7 @@
           <div class="access-container">
             <div class="custom-map-wrapper">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.2191655539737!2d136.88372317660773!3d35.17608967275444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376c306f2a301%3A0xda3eefc6b0a5104d!2z77yr77y177yy77yv77ym77y177yu77yl5qCq5byP5Lya56S-!5e0!3m2!1sen!2sjp!4v1754389631991!5m2!1sen!2sjp" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.6125317194274!2d136.8928163763825!3d35.1662828580888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037728fdb2d151%3A0x9759af1d87d1828e!2z44CSNDYwLTAwMDggQWljaGksIE5hZ295YSwgTmFrYSBXYXJkLCBTYWthZSwgMS1jaMWNbWXiiJIxMOKIkjI5IOS8j-imi0ZH44OT44Or44OH44Kj44Oz44Kw!5e0!3m2!1sen!2sjp!4v1768954965737!5m2!1sen!2sjp" 
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
