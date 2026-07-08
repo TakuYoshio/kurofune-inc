@@ -34,12 +34,20 @@
                 $link = get_field('news-link'); // ACFのリンクフィールド
               ?>
               <li class="news-item">
-                <a class="news-link" href="<?php echo esc_url($link ? $link : get_permalink()); ?>" target="_blank" rel="noopener">
-                  <?php if ($date): ?>
-                    <span class="news-date"><?php echo esc_html($date); ?></span>
-                  <?php endif; ?>
-                  <span class="news-title"><?php the_title(); ?></span>
-                </a>
+                <?php if ($link): ?>
+                  <a class="news-link" href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener">
+                <?php else: ?>
+                  <span class="news-link">
+                <?php endif; ?>
+                    <?php if ($date): ?>
+                      <span class="news-date"><?php echo esc_html($date); ?></span>
+                    <?php endif; ?>
+                    <span class="news-title"><?php the_title(); ?></span>
+                <?php if ($link): ?>
+                  </a>
+                <?php else: ?>
+                  </span>
+                <?php endif; ?>
               </li>
             <?php endwhile; ?>
           </ul>

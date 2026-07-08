@@ -1191,7 +1191,7 @@ section.cta-padding {
     gap: 4px;
   }
 }
-.news-contents .news-list .news-item .news-link:hover {
+.news-contents .news-list .news-item .news-link:is(a):hover {
   color: #12A497;
 }
 .news-contents .news-list .news-item .news-link .news-date {
