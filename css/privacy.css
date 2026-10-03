@@ -121,7 +121,8 @@
   }
 }
 
-#thanks .thanks-container {
+#thanks .thanks-container,
+#not-found .thanks-container {
   max-width: 780px;
   margin: 0 auto;
   padding: 80px 40px;
@@ -130,11 +131,13 @@
   text-align: center;
 }
 @media (max-width: 460px) {
-  #thanks .thanks-container {
+  #thanks .thanks-container,
+  #not-found .thanks-container {
     padding: 48px 16px;
   }
 }
-#thanks .thanks-title {
+#thanks .thanks-title,
+#not-found .thanks-title {
   margin-bottom: 24px;
   color: #12A497;
   font-size: 24px;
@@ -142,32 +145,38 @@
   line-height: 1.6;
 }
 @media (max-width: 768px) {
-  #thanks .thanks-title {
+  #thanks .thanks-title,
+  #not-found .thanks-title {
     font-size: 20px;
   }
 }
 @media (max-width: 460px) {
-  #thanks .thanks-title {
+  #thanks .thanks-title,
+  #not-found .thanks-title {
     margin-bottom: 16px;
     font-size: 18px;
   }
 }
-#thanks .thanks-text {
+#thanks .thanks-text,
+#not-found .thanks-text {
   color: #333;
   font-size: 16px;
   line-height: 1.9;
 }
 @media (max-width: 768px) {
-  #thanks .thanks-text {
+  #thanks .thanks-text,
+  #not-found .thanks-text {
     font-size: 14px;
   }
 }
 @media (max-width: 460px) {
-  #thanks .thanks-text {
+  #thanks .thanks-text,
+  #not-found .thanks-text {
     font-size: 13px;
   }
 }
-#thanks .btn-container {
+#thanks .btn-container,
+#not-found .btn-container {
   display: flex;
   justify-content: center;
 }

@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php /*?>ウェルカム画面はブラウザを開いている間は初回のみ表示（描画前に判定してちらつきを防ぐ）<?php */?>
+  <script>
+    try {
+      if (sessionStorage.getItem('kurofune_loading_shown')) {
+        document.documentElement.classList.add('no-loading');
+      }
+    } catch (e) {}
+  </script>
   <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/destyle.css'); ?>">
   <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/common.css'); ?>">
-  <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/slick.css'); ?>">
-  <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/slick-theme.css'); ?>">
   <?php /*?>トップページの場合<?php */?>
   <?php if ( is_home() || is_front_page() ) : ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/top.css'); ?>">
@@ -30,7 +36,7 @@
   <!-- ロゴのローディング -->
   <div id="loading">
     <div class="loading-logo">
-      <img src="<?php echo get_theme_file_uri('images/Logo-kurofune.png'); ?>" alt="KUROFUNE Logo">
+      <img src="<?php echo get_theme_file_uri('images/Logo-kurofune.webp'); ?>" alt="KUROFUNE Logo">
     </div>
   </div>
   <div class="wrap">

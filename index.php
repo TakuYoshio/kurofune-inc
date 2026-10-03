@@ -23,10 +23,10 @@
             </div>
           </div>
           <div class="mv-img pc">
-            <img src="<?php echo get_theme_file_uri('images/mv-img.png'); ?>" alt="特定技能人材">
+            <img src="<?php echo get_theme_file_uri('images/mv-img.webp'); ?>" alt="特定技能人材">
           </div>
           <div class="mv-img sp">
-            <img src="<?php echo get_theme_file_uri('images/fkv-img-sp.png'); ?>" alt="特定技能人材">
+            <img src="<?php echo get_theme_file_uri('images/fkv-img-sp.webp'); ?>" alt="特定技能人材">
           </div>
         </div>
         <div class="mv-obj01">
@@ -74,7 +74,7 @@
                   </div>
                   <div class="rounte-image">
                     <div class="rounte-image-content">
-                      <img src="<?php echo get_theme_file_uri('images/kurofune-app-mockup.png'); ?>" alt="KUROFUNE APP" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/kurofune-app-mockup.webp'); ?>" alt="KUROFUNE APP" loading="lazy">
                       <p class="p-03 m-plus-1p-regular">
                         「KUROFUNE」アプリ<br>
                         「WABISABI-JAPAN」
@@ -197,7 +197,7 @@
                 </div>
               </div>
               <div class="app-img">
-                <img src="<?php echo get_theme_file_uri('images/App.png'); ?>" alt="KUROFUNE PASSPORT Mockup" loading="lazy">
+                <img src="<?php echo get_theme_file_uri('images/App.webp'); ?>" alt="KUROFUNE PASSPORT Mockup" loading="lazy">
               </div>
             </div>
             <div class="feature-list">
@@ -205,7 +205,7 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-chat.png'); ?>" alt="Chat Support" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/feature-chat.webp'); ?>" alt="Chat Support" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
@@ -235,7 +235,7 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-buddy.png'); ?>" alt="同行依頼機能" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/feature-buddy.webp'); ?>" alt="同行依頼機能" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
@@ -265,7 +265,7 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img feature-item-img-pc">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-dashboard.png'); ?>" alt="支援履歴の見える化" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/feature-dashboard.webp'); ?>" alt="支援履歴の見える化" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
@@ -293,7 +293,7 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img feature-item-img-pc">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-document.png'); ?>" alt="書類自動生成機能（準備中）" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/feature-document.webp'); ?>" alt="書類自動生成機能（準備中）" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
@@ -323,7 +323,7 @@
                 <li class="feature-item">
                   <div class="feature-item-child feature-item-img">
                     <div class="img">
-                      <img src="<?php echo get_theme_file_uri('images/feature-learning.png'); ?>" alt="教育機能" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/feature-learning.webp'); ?>" alt="教育機能" loading="lazy">
                     </div>
                   </div>
                   <div class="feature-item-child feature-item-contents">
@@ -364,8 +364,8 @@
                 </div>
               </div>
               <div class="price-list">
-                <img src="<?php echo get_theme_file_uri('images/price.png'); ?>" alt="料金表" class="pc" loading="lazy">
-                <img src="<?php echo get_theme_file_uri('images/price-sp.png'); ?>" alt="料金表" class="sp" loading="lazy">
+                <img src="<?php echo get_theme_file_uri('images/price.webp'); ?>" alt="料金表" class="pc" loading="lazy">
+                <img src="<?php echo get_theme_file_uri('images/price-sp.webp'); ?>" alt="料金表" class="sp" loading="lazy">
                 <div class="caution">
                   <p class="p-04">
                     ※「KUROFUNE PASSPORT」による管理を依頼した場合のみ紹介料金0円になる<br>
@@ -426,7 +426,7 @@
               <ul>
                 <li class="usecase-item">
                   <div class="usecase-img">
-                    <img src="<?php echo get_theme_file_uri('images/usecase-dummy.jpg'); ?>" alt="Usecase">
+                    <img src="<?php echo get_theme_file_uri('images/usecase-dummy.webp'); ?>" alt="Usecase">
                   </div>
                   <div class="usecase-content">
                     <div class="usecase-title">
@@ -442,7 +442,7 @@
                 </li>
                 <li class="usecase-item">
                   <div class="usecase-img">
-                    <img src="<?php echo get_theme_file_uri('images/usecase-dummy.jpg'); ?>" alt="Usecase">
+                    <img src="<?php echo get_theme_file_uri('images/usecase-dummy.webp'); ?>" alt="Usecase">
                   </div>
                   <div class="usecase-content">
                     <div class="usecase-title">
@@ -458,7 +458,7 @@
                 </li>
                 <li class="usecase-item">
                   <div class="usecase-img">
-                    <img src="<?php echo get_theme_file_uri('images/usecase-dummy.jpg'); ?>" alt="Usecase">
+                    <img src="<?php echo get_theme_file_uri('images/usecase-dummy.webp'); ?>" alt="Usecase">
                   </div>
                   <div class="usecase-content">
                     <div class="usecase-title">
@@ -523,7 +523,7 @@
               </div>
             </div>
             <div class="company-map-img">
-              <img src="<?php echo get_theme_file_uri('images/Japan-map.png'); ?>" alt="Company Map" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('images/Japan-map.webp'); ?>" alt="Company Map" loading="lazy">
             </div>
           </div>
         </div>
@@ -552,13 +552,27 @@
             </div>
           </div>
         </div>
-        <div class="slider slider-container">
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img01.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img02.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img03.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img04.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img05.jpg'); ?>" alt="Offline image" loading="lazy"></div>
-          <div class="slider-item"><img src="<?php echo get_theme_file_uri('images/offline-img06.jpg'); ?>" alt="Offline image" loading="lazy"></div>
+        <?php
+          $offline_images = array(
+            'images/offline-img01.webp',
+            'images/offline-img02.jpg',
+            'images/offline-img03.webp',
+            'images/offline-img04.webp',
+            'images/offline-img05.webp',
+            'images/offline-img06.webp',
+          );
+        ?>
+        <div class="slider-container">
+          <div class="slider-track">
+            <?php /*?>途切れずに流すため、同じ画像を2周分並べる（2周目は読み上げ対象外）<?php */?>
+            <?php for ( $loop = 0; $loop < 2; $loop++ ) : ?>
+              <?php foreach ( $offline_images as $offline_image ) : ?>
+                <div class="slider-item"<?php if ( $loop === 1 ) echo ' aria-hidden="true"'; ?>>
+                  <img src="<?php echo get_theme_file_uri($offline_image); ?>" alt="<?php echo $loop === 0 ? 'Offline image' : ''; ?>" decoding="async">
+                </div>
+              <?php endforeach; ?>
+            <?php endfor; ?>
+          </div>
         </div>
       </section>
 
@@ -601,10 +615,10 @@
             </div>
             <div class="concept-img layout-flex-child">
               <div class="concept-img01">
-                <img src="<?php echo get_theme_file_uri('images/Concept-img01.jpg'); ?>" alt="Concept image" loading="lazy">
+                <img src="<?php echo get_theme_file_uri('images/Concept-img01.webp'); ?>" alt="Concept image" loading="lazy">
               </div>
               <div class="concept-img02">
-                <img src="<?php echo get_theme_file_uri('images/Concept-img02.jpg'); ?>" alt="Concept image" loading="lazy">
+                <img src="<?php echo get_theme_file_uri('images/Concept-img02.webp'); ?>" alt="Concept image" loading="lazy">
               </div>
             </div>
           </div>
@@ -636,7 +650,7 @@
                 <li class="news-item">
                   <a href="https://prtimes.jp/main/html/rd/p/000000007.000048531.html" class="news-link" target="_blank">
                     <div class="news-thumbnail">
-                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250724.jpg'); ?>" alt="News thumbnail" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250724.webp'); ?>" alt="News thumbnail" loading="lazy">
                     </div>
                     <div class="news-text">
                       <div class="news-date">2025.07.24</div>
@@ -654,7 +668,7 @@
                 <li class="news-item">
                   <a href="https://prtimes.jp/main/html/rd/p/000000006.000048531.html" class="news-link" target="_blank">
                     <div class="news-thumbnail">
-                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250523.jpg'); ?>" alt="News thumbnail" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250523.webp'); ?>" alt="News thumbnail" loading="lazy">
                     </div>
                     <div class="news-text">
                       <div class="news-date">2025.05.23</div>
@@ -672,7 +686,7 @@
                 <li class="news-item">
                   <a href="https://prtimes.jp/main/html/rd/p/000000006.000048531.html" class="news-link" target="_blank">
                     <div class="news-thumbnail">
-                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250415.jpg'); ?>" alt="News thumbnail" loading="lazy">
+                      <img src="<?php echo get_theme_file_uri('images/kurofune-news_250415.webp'); ?>" alt="News thumbnail" loading="lazy">
                     </div>
                     <div class="news-text">
                       <div class="news-date">2025.04.15</div>

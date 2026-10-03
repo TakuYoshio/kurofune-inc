@@ -80,8 +80,6 @@
     </footer>
   </div>
   <?php wp_footer(); ?>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <script src="<?php echo get_theme_file_uri('js/slick.min.js'); ?>"></script>
   <script src="<?php echo get_theme_file_uri('js/main.js'); ?>"></script>
 </body>
 </html>

@@ -1277,6 +1277,11 @@ section.cta-padding {
   }
 }
 /* フェードアウト用クラス */
+/* 2回目以降のアクセスでは表示しない */
+.no-loading #loading {
+  display: none;
+}
+
 #loading.hide {
   opacity: 0;
   visibility: hidden;

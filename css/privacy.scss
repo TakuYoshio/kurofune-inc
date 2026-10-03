@@ -102,8 +102,9 @@
   }
 }
 
-// ========== お問い合わせ完了（サンクス） ==========
-#thanks {
+// ========== お問い合わせ完了（サンクス）・404 ==========
+#thanks,
+#not-found {
   .thanks-container {
     max-width: 780px;
     margin: 0 auto;
