@@ -15,7 +15,13 @@
           <div class="privacy-policy-container">
             <div class="privacy-policy-inner">
               <?php while ( have_posts() ) : the_post(); ?>
-                <?php the_content(); ?>
+                <?php if ( trim( get_the_content() ) !== '' ) : ?>
+                  <?php /*?>管理画面で本文が入力されていればそちらを優先<?php */?>
+                  <?php the_content(); ?>
+                <?php else : ?>
+                  <?php /*?>本文が空の場合はテーマ同梱の本文を表示<?php */?>
+                  <?php get_template_part('parts/privacy-policy-content'); ?>
+                <?php endif; ?>
               <?php endwhile; ?>
             </div>
           </div>
