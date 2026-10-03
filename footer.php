@@ -69,6 +69,9 @@
           </div>
         </div>
       </div>
+      <div class="footer-legal">
+        <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">プライバシーポリシー</a>
+      </div>
       <div class="copy-write">
         <small>
           &copy; KUROFUNE INC.
