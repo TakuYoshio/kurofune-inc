@@ -6,7 +6,7 @@
         <h5 class="sub-fv-title-en">CONTACT</h5>
       </div>
       <div class="sub-fv-image">
-        <img src="<?php echo get_theme_file_uri('images/kasou/contact-fv.jpg'); ?>" alt="Sub page FKV">
+        <img src="<?php echo get_theme_file_uri('images/kasou/contact-fv.webp'); ?>" alt="Sub page FKV">
       </div>
     </section>
     <section id="contact-form">

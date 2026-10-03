@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/destyle.css'); ?>">
   <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/common.css'); ?>">
-  <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/slick.css'); ?>">
-  <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/slick-theme.css'); ?>">
   <?php /*?>トップページの場合<?php */?>
   <?php if ( is_home() || is_front_page() ) : ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/top.css'); ?>">
@@ -18,7 +16,7 @@
   <?php if ( is_page('contact') ): ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/contact.css'); ?>">
   <?php endif; ?>
-  <?php if ( is_page( array('privacy-policy', 'thanks') ) ): ?>
+  <?php if ( is_page( array('privacy-policy', 'thanks') ) || is_404() ): ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/privacy.css'); ?>">
   <?php endif; ?>
   <?php /*?>サンクスページは検索結果に表示させない<?php */?>

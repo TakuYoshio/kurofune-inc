@@ -624,20 +624,38 @@
     }
   }
   .slider-container {
-    overflow: hidden; // 追加（親に指定）
-    .slider-item {
-      width: auto;     // 追加：variableWidth対応
-      display: inline-block; // 追加：崩れ防止
-      height: 400px;
-      @include max(sm) {
-        height: 220px;
-      }
-      img {
-        height: 100%;
-        width: auto;   // 追加：画像比率維持で崩れを防止
-        display: block; // 追加：iOSでのimg空白回避
-      }
+    overflow: hidden;
+  }
+  // 同じ画像を2周分並べたトラックを、ちょうど1周分（-50%）動かしてループさせる
+  .slider-track {
+    display: flex;
+    width: max-content;
+    animation: offline-marquee 60s linear infinite;
+    will-change: transform;
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
     }
+  }
+  .slider-item {
+    flex-shrink: 0;
+    height: 400px;
+    @include max(sm) {
+      height: 220px;
+    }
+    img {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+  }
+}
+
+@keyframes offline-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 

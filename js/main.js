@@ -27,43 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-$(function(){
-  $('.slider').slick({
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 10000,
-    cssEase: "linear",
-    slidesToShow: 4,
-    swipe: false,
-    arrows: false,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 750,
-        settings: {
-          slidesToShow: 3,
-        }
-      }
-    ]
-  });
-
-  // 初期化直後に少し遅延してsetPositionを呼ぶ
-  setTimeout(function() {
-    $('.slider').slick('setPosition');
-  }, 300);
-
-  // 画像が読み込まれたら毎回setPositionを呼ぶ
-  $('.slider img').on('load', function () {
-    $('.slider').slick('setPosition');
-  });
-});
-
-// ローディング アニメーション
+// ローディング アニメーション（トップページ・ブラウザを開いている間は初回のみ）
+// 2回目以降は header-top.php で <html> に no-loading クラスが付き、CSSで非表示になる
 window.addEventListener('load', function () {
-  // ローディングの非表示処理（ロゴ表示後1.8秒後に消す）
+  const loading = document.getElementById('loading');
+  if (!loading || document.documentElement.classList.contains('no-loading')) return;
+
+  // ロゴ表示後1.8秒後に消す（ロゴのfadeInアニメ時間（1.5s）＋余白）
   setTimeout(function () {
-    document.getElementById('loading').classList.add('hide');
-  }, 1800); // ロゴのfadeInアニメ時間（1.5s）＋余白
+    loading.classList.add('hide');
+  }, 1800);
+
+  try {
+    sessionStorage.setItem('kurofune_loading_shown', '1');
+  } catch (e) {}
 });
