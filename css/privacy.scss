@@ -1,0 +1,147 @@
+@use "variable" as *;
+
+// ========== プライバシーポリシー ==========
+#privacy-policy {
+  .privacy-policy-container {
+    padding: 80px;
+    background-color: $background-color-sub;
+    border-radius: 40px;
+    @include max(md) {
+      padding: 56px 40px;
+    }
+    @include max(sm) {
+      padding: 40px 16px;
+    }
+  }
+  .privacy-policy-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    color: $font-color-normal;
+    font-size: $font-size-p03;
+    line-height: 1.9;
+    letter-spacing: 0.05em;
+    @include max(md) {
+      font-size: $font-size-p03-tab;
+    }
+    @include max(sm) {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    & > *:first-child {
+      margin-top: 0;
+    }
+    h2 {
+      margin: 56px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid $main-color;
+      color: $main-color;
+      font-size: $font-size-p01;
+      font-weight: $font-weight-bold;
+      line-height: 1.5;
+      @include max(md) {
+        margin-top: 48px;
+        font-size: $font-size-p01-tab;
+      }
+      @include max(sm) {
+        margin: 40px 0 16px;
+        font-size: $font-size-p02;
+      }
+    }
+    h3 {
+      margin: 32px 0 12px;
+      font-size: $font-size-p02;
+      font-weight: $font-weight-bold;
+      line-height: 1.6;
+      @include max(md) {
+        font-size: $font-size-p02-tab;
+      }
+      @include max(sm) {
+        margin-top: 24px;
+        font-size: $font-size-p02-sp;
+      }
+    }
+    p {
+      margin: 0 0 16px;
+    }
+    ul,
+    ol {
+      margin: 0 0 16px;
+      padding-left: 1.5em;
+      li {
+        margin-bottom: 8px;
+      }
+      ul,
+      ol {
+        margin: 8px 0 0;
+      }
+    }
+    ul {
+      list-style: disc;
+    }
+    ol {
+      list-style: decimal;
+    }
+    strong {
+      font-weight: $font-weight-bold;
+    }
+    a {
+      color: $main-color;
+      text-decoration: underline;
+      word-break: break-all;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .privacy-policy-supplement {
+      margin-top: 56px;
+      text-align: right;
+      @include max(sm) {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+// ========== お問い合わせ完了（サンクス） ==========
+#thanks {
+  .thanks-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    background-color: $background-color-sub;
+    border-radius: 40px;
+    text-align: center;
+    @include max(sm) {
+      padding: 48px 16px;
+    }
+  }
+  .thanks-title {
+    margin-bottom: 24px;
+    color: $main-color;
+    font-size: $font-size-p01;
+    font-weight: $font-weight-bold;
+    line-height: 1.6;
+    @include max(md) {
+      font-size: $font-size-p01-tab;
+    }
+    @include max(sm) {
+      margin-bottom: 16px;
+      font-size: $font-size-p02;
+    }
+  }
+  .thanks-text {
+    color: $font-color-normal;
+    font-size: $font-size-p03;
+    line-height: 1.9;
+    @include max(md) {
+      font-size: $font-size-p03-tab;
+    }
+    @include max(sm) {
+      font-size: 13px;
+    }
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+}

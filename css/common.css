@@ -729,8 +729,31 @@ section.cta-padding {
 #footer .footer-container .footer-menu .menu ul .menu-item:nth-child(even) {
   margin-right: none;
 }
-#footer .copy-write {
+#footer .footer-legal {
   margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  #footer .footer-legal {
+    font-size: 12px;
+  }
+}
+@media (max-width: 460px) {
+  #footer .footer-legal {
+    font-size: 10px;
+  }
+}
+#footer .footer-legal a {
+  color: #fff;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+#footer .footer-legal a:hover {
+  opacity: 0.7;
+}
+#footer .copy-write {
+  margin-top: 16px;
   text-align: center;
   color: #fff;
   font-size: 14px;

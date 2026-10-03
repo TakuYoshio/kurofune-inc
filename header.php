@@ -18,6 +18,13 @@
   <?php if ( is_page('contact') ): ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/contact.css'); ?>">
   <?php endif; ?>
+  <?php if ( is_page( array('privacy-policy', 'thanks') ) ): ?>
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/privacy.css'); ?>">
+  <?php endif; ?>
+  <?php /*?>サンクスページは検索結果に表示させない<?php */?>
+  <?php if ( is_page('thanks') ): ?>
+    <meta name="robots" content="noindex, nofollow">
+  <?php endif; ?>
   <!-- ============ Google font ============ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
