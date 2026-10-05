@@ -80,5 +80,9 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="<?php echo get_theme_file_uri('js/slick.min.js'); ?>"></script>
   <script src="<?php echo get_theme_file_uri('js/main.js'); ?>"></script>
+  <?php /*?>サンクスページのみ: 問い合わせCV計測<?php */?>
+  <?php if ( is_page('thanks') ) : ?>
+    <script src="<?php echo get_theme_file_uri('js/thanks-tracking.js'); ?>"></script>
+  <?php endif; ?>
 </body>
 </html>

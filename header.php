@@ -15,7 +15,7 @@
   <?php if ( is_page('company') ): ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/company.css'); ?>">
   <?php endif; ?>
-  <?php if ( is_page('contact') ): ?>
+  <?php if ( is_page( array( 'contact', 'thanks' ) ) ): ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/contact.css'); ?>">
   <?php endif; ?>
   <!-- ============ Google font ============ -->
@@ -28,6 +28,10 @@
   <link rel="icon" href="<?php echo get_theme_file_uri('images/favicon/favicon.ico'); ?>" sizes="32x32">
   <link rel="icon" href="<?php echo get_theme_file_uri('images/favicon/favicon.svg'); ?>" type="image/svg+xml">
   <link rel="apple-touch-icon" href="<?php echo get_theme_file_uri('images/favicon/apple-touch-icon.png'); ?>">
+  <?php /*?>サンクスページは検索結果に出さない（CV計測の汚染防止）<?php */?>
+  <?php if ( is_page('thanks') ): ?>
+    <meta name="robots" content="noindex,nofollow">
+  <?php endif; ?>
   <?php wp_head(); ?>
 </head>
 <body>
