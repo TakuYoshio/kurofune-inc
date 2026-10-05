@@ -5,7 +5,7 @@
     <small class="lp-footer__copy">&copy; KUROFUNE Inc. All Rights Reserved.</small>
   </footer>
   <a href="#contact" class="lp-fixed-cta" id="lp-fixed-cta" aria-hidden="true" tabindex="-1">
-    <span>今すぐ無料で問い合わせる（最短1分）</span>
+    <span>今すぐ無料で問い合わせる (最短1分)</span>
     <img src="<?php echo get_theme_file_uri('images/lp/common/icon-arrow-circle-white.svg'); ?>" alt="" width="24" height="24">
   </a>
   <?php wp_footer(); ?>

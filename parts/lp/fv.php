@@ -17,15 +17,19 @@ $common = get_theme_file_uri('images/lp/common/');
       </div>
       <p class="lp-fv__target"><?php echo kurofune_lp_text($fv['target']); ?></p>
       <a href="#contact" class="lp-fv__btn">
-        <span>今すぐ無料で問い合わせる（最短1分）</span>
+        <span>今すぐ無料で問い合わせる (最短1分)</span>
         <img src="<?php echo esc_url($common . 'icon-arrow-circle-white.svg'); ?>" alt="" width="24" height="24">
       </a>
     </div>
     <div class="lp-fv__authority">
-      <p class="lp-fv__authority-stars">★ ★ ★</p>
-      <p class="lp-fv__authority-area"><?php echo esc_html($fv['authority']['area']); ?></p>
-      <p class="lp-fv__authority-text"><?php echo esc_html($fv['authority']['text']); ?></p>
-      <p class="lp-fv__authority-title"><?php echo esc_html($fv['authority']['title']); ?></p>
+      <div class="lp-fv__authority-row">
+        <p class="lp-fv__authority-stars">★ ★ ★</p>
+        <p class="lp-fv__authority-area"><?php echo esc_html($fv['authority']['area']); ?></p>
+      </div>
+      <div class="lp-fv__authority-row">
+        <p class="lp-fv__authority-text"><?php echo esc_html($fv['authority']['text']); ?></p>
+        <p class="lp-fv__authority-title"><?php echo esc_html($fv['authority']['title']); ?></p>
+      </div>
     </div>
   </div>
   <p class="lp-fv__bg-text" aria-hidden="true">KUROFUNE INC.</p>

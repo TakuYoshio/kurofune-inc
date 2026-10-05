@@ -21,7 +21,7 @@ return array(
     'image'     => $img . 'fv.webp',
     'lead'      => '企業側の採用・教育リスクを極限までゼロにする',
     'title'     => '完全事前選考<br>スキーム',
-    'target'    => '造船現場の即戦力<br class="sp">（特定技能1号）を。',
+    'target'    => '造船現場の即戦力（特定技能1号）を。',
     'authority' => array(
       'area'  => '愛媛・広島・長崎など',
       'text'  => '全国の造船会社様から',
