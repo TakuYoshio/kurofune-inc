@@ -1575,14 +1575,14 @@ body.lp {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 48px 120px;
+  padding: 48px 120px 136px; // 下部は追従CTAの分の余白
   background: $lp-navy-dark;
   @include max(lg) {
-    padding: 48px 40px;
+    padding: 48px 40px 136px;
   }
   @include max(md) {
     flex-direction: column;
-    padding: 32px 20px;
+    padding: 32px 20px calc(104px + env(safe-area-inset-bottom));
   }
 
   &__logo img {
@@ -1602,5 +1602,55 @@ body.lp {
     @include max(md) {
       font-size: 11px;
     }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 追従CTA ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-fixed-cta {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 40px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: $lp-navy;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 16px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s, background-color 0.3s;
+  @include max(md) {
+    right: 16px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    left: 16px;
+    gap: 8px;
+    padding: 16px 12px;
+    font-size: 15px;
+    letter-spacing: 0;
+    transform: translateY(16px);
+  }
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+    @include max(md) {
+      transform: translateY(0);
+    }
+  }
+
+  &:hover {
+    background: $lp-blue;
   }
 }
