@@ -1,0 +1,1681 @@
+@use "variable" as *;
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 業種別LP ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// デザイン：Figma「KUROFUNE LP design_01」（PC 1440px）
+
+$lp-navy: #062e52;
+$lp-navy-dark: #031a30;
+$lp-blue: #214793;
+$lp-gold: #e8b83f;
+$lp-gold-light: #f7d978;
+$lp-gold-pale: #fff4c7;
+$lp-gold-text: #b8862b;
+$lp-red: #bf3333;
+$lp-text: #334052;
+$lp-gray: #73808f;
+$lp-pale: #f1f5fb;
+$lp-pale-blue: #ecf1f9;
+$lp-border: #d1dbeb;
+$lp-gold-gradient: linear-gradient(to right, $lp-gold-light, $lp-gold);
+
+$lp-font-jp: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+$lp-font-en: "Montserrat", sans-serif;
+
+html {
+  scroll-behavior: smooth;
+}
+
+// 詳細度を0にして、各パーツ側の width / height 指定が優先されるようにする
+:where(body.lp) img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+body.lp {
+  background: #fff;
+  color: $lp-navy;
+  font-family: $lp-font-jp;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+
+
+  em {
+    font-style: normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  dd {
+    word-break: auto-phrase;
+  }
+
+  .pc {
+    @include max(md) {
+      display: none;
+    }
+  }
+
+  .sp {
+    display: none;
+    @include max(md) {
+      display: inline;
+    }
+  }
+}
+
+.lp-main {
+  overflow: hidden;
+}
+
+[id] {
+  scroll-margin-top: 88px;
+  @include max(md) {
+    scroll-margin-top: 60px;
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 共通 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-sec {
+  position: relative;
+  padding: 140px 20px;
+  @include max(md) {
+    padding: 72px 20px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 56px;
+    text-align: center;
+    @include max(md) {
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__en {
+    color: $lp-blue;
+    font-family: $lp-font-en;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    @include max(md) {
+      font-size: 13px;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    @include max(lg) {
+      font-size: 30px;
+    }
+    @include max(md) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    em {
+      color: $lp-gold;
+    }
+  }
+
+  &__lead {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+    @include max(md) {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+
+  &--dark {
+    background: $lp-navy;
+    color: #fff;
+
+    .lp-sec__en {
+      color: $lp-gold;
+    }
+  }
+}
+
+.lp-btn-gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 20px 32px;
+  border-radius: 4px;
+  background: $lp-gold-gradient;
+  color: $lp-navy;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  transition: opacity 0.3s;
+  @include max(md) {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ ヘッダー ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 88px;
+  padding: 0 40px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  @include max(md) {
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  &.is-scrolled {
+    background: rgba($lp-navy, 0.95);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &__logo img {
+    width: 200px;
+    @include max(md) {
+      width: 144px;
+    }
+  }
+
+  &__btn {
+    padding: 10px 20px;
+    border: 1px solid $lp-navy;
+    border-radius: 4px;
+    background: #fff;
+    color: $lp-navy;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    transition: opacity 0.3s;
+    @include max(md) {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ FV ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-fv {
+  position: relative;
+  color: #fff;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: $lp-navy;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      @include max(md) {
+        height: 360px;
+        object-position: 76% 0;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(6, 46, 82, 0.95) 0%,
+        rgba(6, 58, 104, 0.8) 40%,
+        rgba(6, 58, 104, 0.3) 70%,
+        rgba(6, 58, 104, 0) 85%
+      );
+      @include max(md) {
+        background: linear-gradient(
+          180deg,
+          rgba(6, 58, 104, 0) 90px,
+          rgba(6, 58, 104, 0.3) 180px,
+          rgb(6, 58, 104) 360px,
+          $lp-navy 100%
+        );
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1440px;
+    min-height: 810px;
+    margin: 0 auto;
+    padding: 123px 80px 73px 120px;
+    @include max(xl) {
+      padding: 123px 40px 73px 60px;
+    }
+    @include max(lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 0;
+      padding-bottom: 120px;
+    }
+    @include max(md) {
+      gap: 24px;
+      min-height: 600px;
+      padding: 129px 20px 64px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+  }
+
+  &__lead {
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    @include max(md) {
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 28px;
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+    @include max(md) {
+      margin-top: 16px;
+      font-size: 48px;
+    }
+  }
+
+  &__fee {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+    @include max(md) {
+      margin-top: 16px;
+    }
+  }
+
+  &__fee-label {
+    padding: 8px 16px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 18px;
+    }
+  }
+
+  &__fee-price {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 32px;
+    }
+  }
+
+  &__fee-zero {
+    display: inline-block;
+    padding: 0 8px;
+    background: linear-gradient(180deg, $lp-gold-pale 0%, $lp-gold-light 30%, $lp-gold 65%, #ffd96a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: $lp-font-en;
+    font-size: 128px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 0.92;
+    @include max(md) {
+      font-size: 93px;
+    }
+  }
+
+  &__target {
+    margin-top: 24px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      margin-top: 16px;
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+    padding: 20px 40px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    background: $lp-navy;
+    filter: drop-shadow(6px 6px 4px rgba(255, 255, 255, 0.25));
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+    @include max(md) {
+      margin-top: 32px;
+      padding: 16px 24px;
+      font-size: 15px;
+
+      img {
+        width: 20px;
+      }
+    }
+
+    &:hover {
+      background: $lp-blue;
+    }
+  }
+
+  // 「選ばれています」サークル
+  &__authority {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 244px;
+    height: 244px;
+    border: 3px solid $lp-gold-pale;
+    border-radius: 50%;
+    background: rgba($lp-navy, 0.9);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    white-space: nowrap;
+    @include max(lg) {
+      position: absolute;
+      right: 40px;
+      bottom: -60px;
+    }
+    // SPは横長バッジ
+    @include max(md) {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      gap: 4px;
+      width: 100%;
+      height: auto;
+      padding: 12px 16px;
+      border-width: 2px;
+      border-radius: 8px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba($lp-gold, 0.6);
+      border-radius: 50%;
+      @include max(md) {
+        inset: 3px;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  &__authority-row {
+    display: contents;
+    @include max(md) {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+
+      > * {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__authority-stars {
+    color: $lp-gold;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    @include max(md) {
+      font-size: 12px;
+    }
+  }
+
+  &__authority-area {
+    margin-top: 4px;
+    color: $lp-gold-light;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 14px;
+    }
+  }
+
+  &__authority-text {
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 14px;
+    }
+  }
+
+  &__authority-title {
+    margin-top: 6px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+    @include max(md) {
+      font-size: 17px;
+    }
+  }
+
+  // 背景の「KUROFUNE INC.」
+  &__bg-text {
+    position: absolute;
+    top: calc(100% - 100px);
+    left: 50%;
+    z-index: 2;
+    color: $lp-blue;
+    font-family: $lp-font-en;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0.3;
+    transform: translateX(-50%);
+    pointer-events: none;
+    @include max(lg) {
+      top: calc(100% - 64px);
+      font-size: 128px;
+    }
+    @include max(md) {
+      top: 100%;
+      font-size: 80px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ サブコピー ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-subcopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 140px 20px 40px;
+  @include max(md) {
+    gap: 24px;
+    padding: 96px 20px 24px;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    text-align: center;
+    @include max(md) {
+      font-size: 16px;
+      text-align: left;
+    }
+
+    em {
+      color: $lp-blue;
+    }
+  }
+
+  &__points {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    @include max(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding-top: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 40px;
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      @include max(md) {
+        gap: 12px;
+        padding: 0;
+        font-size: 20px;
+
+        img {
+          width: 28px;
+        }
+      }
+
+      & + li {
+        border-left: 1px solid #c7d4e5;
+        @include max(md) {
+          border-left: none;
+        }
+      }
+    }
+
+    small {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 課題喚起 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-problem {
+  padding-top: 100px;
+  @include max(md) {
+    padding-top: 64px;
+  }
+
+  .lp-sec__head {
+    margin-bottom: 48px;
+    @include max(md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__illust {
+    position: absolute;
+    @include max(lg) {
+      display: none;
+    }
+
+    &--right {
+      top: 100px;
+      right: calc(50% - 622px);
+    }
+
+    &--left {
+      top: 526px;
+      left: calc(50% - 642px);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 984px;
+    margin: 0 auto;
+    @include max(md) {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-height: 157px;
+    padding: 32px;
+    border-radius: 8px;
+    background: $lp-pale;
+    @include max(md) {
+      gap: 12px;
+      min-height: 0;
+      padding: 20px;
+    }
+
+    img {
+      flex-shrink: 0;
+      @include max(md) {
+        width: 24px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+      @include max(md) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 解決策 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-solution {
+  padding-top: 200px;
+  clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+  @include max(md) {
+    padding-top: 104px;
+    clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include max(md) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 440px;
+    }
+  }
+
+  &__card {
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    color: $lp-navy;
+  }
+
+  &__img img {
+    width: 100%;
+    aspect-ratio: 384 / 216;
+    object-fit: cover;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 32px 32px 40px;
+    @include max(lg) {
+      padding: 24px 20px 32px;
+    }
+  }
+
+  &__num {
+    color: $lp-blue;
+    font-family: $lp-font-en;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.16em;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    @include max(lg) {
+      font-size: 22px;
+    }
+  }
+
+  &__emphasis {
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: $lp-pale;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    @include max(lg) {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    color: $lp-text;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    @include max(lg) {
+      font-size: 15px;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 8ステップ ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-flow {
+  &__panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px;
+    border-radius: 16px;
+    background: $lp-pale-blue;
+    @include max(xl) {
+      padding: 40px 32px;
+    }
+    @include max(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @include max(md) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 24px 16px;
+      border-radius: 12px;
+    }
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 320px;
+    padding: 24px 22px 28px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: #fff;
+    @include max(lg) {
+      min-height: 0;
+    }
+    @include max(md) {
+      padding: 20px;
+    }
+
+    &:nth-child(n + 5) {
+      min-height: 340px;
+      @include max(lg) {
+        min-height: 0;
+      }
+    }
+
+    &--key {
+      background: $lp-navy;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      color: #fff;
+
+      .lp-flow__num {
+        color: $lp-gold;
+      }
+
+      .lp-flow__title::after {
+        background: $lp-gold;
+      }
+
+      .lp-flow__text {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .lp-flow__badge {
+        padding: 4px 10px;
+        background: linear-gradient(to right, $lp-gold-light, $lp-gold);
+        color: $lp-navy;
+        font-size: 12px;
+        font-weight: 900;
+      }
+    }
+
+    &--risk {
+      border-color: $lp-gold;
+
+      .lp-flow__title::after {
+        background: $lp-gold;
+      }
+
+      .lp-flow__badge {
+        padding: 3px 8px;
+        border: 1px solid $lp-gold;
+        background: #fff;
+        color: $lp-gold-text;
+        font-size: 11px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 25px;
+  }
+
+  &__num {
+    font-family: $lp-font-en;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.12em;
+  }
+
+  &__badge {
+    border-radius: 4px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  &__title {
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    @include max(md) {
+      font-size: 18px;
+    }
+
+    .is-red {
+      color: $lp-red;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 3px;
+      margin-top: 10px;
+      background: $lp-blue;
+    }
+  }
+
+  &__text {
+    color: $lp-text;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+
+  // ステップ間の矢印（PCは右、SPは下）
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: -34px;
+    transform: translateY(-50%);
+    @include max(md) {
+      top: auto;
+      right: auto;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+
+  &__step:nth-child(4n) &__arrow {
+    @include min(lg) {
+      display: none;
+    }
+  }
+
+  &__step &__arrow {
+    @media (min-width: #{map-get($breakpoints, md) + 1}) and (max-width: #{map-get($breakpoints, lg)}) {
+      display: none;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 料金体系 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-price {
+  padding: 40px 20px 160px;
+  @include max(md) {
+    padding: 72px 20px;
+  }
+
+  &__illust {
+    position: absolute;
+    @include max(lg) {
+      display: none;
+    }
+
+    &--coins {
+      top: -50px;
+      right: calc(50% - 680px);
+    }
+
+    &--calc {
+      bottom: 44px;
+      left: calc(50% - 680px);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include max(lg) {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 480px;
+    min-height: 326px;
+    padding: 48px 40px;
+    border-radius: 12px;
+    text-align: center;
+    @include max(md) {
+      width: 100%;
+      max-width: 440px;
+      min-height: 0;
+      padding: 32px 16px;
+      gap: 12px;
+    }
+
+    &--fee {
+      background: $lp-navy;
+      color: #fff;
+
+      .lp-price__label {
+        background: #fff;
+      }
+
+      .lp-price__num {
+        background: linear-gradient(180deg, $lp-gold-pale 0%, $lp-gold-light 30%, $lp-gold 65%, #ffd96a 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 120px;
+        @include max(md) {
+          font-size: 88px;
+        }
+      }
+
+      .lp-price__unit {
+        font-size: 40px;
+        @include max(md) {
+          font-size: 32px;
+        }
+      }
+    }
+
+    &--monthly {
+      border: 1px solid $lp-border;
+      background: #fff;
+
+      .lp-price__label {
+        background: $lp-pale-blue;
+      }
+
+      .lp-price__num {
+        font-size: 88px;
+        @include max(md) {
+          font-size: 56px;
+        }
+      }
+
+      .lp-price__unit {
+        font-size: 32px;
+        @include max(md) {
+          font-size: 22px;
+        }
+      }
+
+      .lp-price__note {
+        color: $lp-text;
+      }
+    }
+  }
+
+  &__label {
+    padding: 6px 16px;
+    border-radius: 4px;
+    color: $lp-navy;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 15px;
+    }
+  }
+
+  &__value {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  &__num {
+    font-family: $lp-font-en;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  &__unit {
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+  }
+
+  &__note {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 14px;
+    }
+
+    s {
+      color: #b2c2d6;
+    }
+  }
+
+  &__plus {
+    width: 64px;
+    color: $lp-blue;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__caption {
+    margin-top: 24px;
+    color: $lp-gray;
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    text-align: center;
+    @include max(md) {
+      font-size: 12px;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ オンライン説明会 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-seminar {
+  &__tag {
+    padding: 6px 16px;
+    border-radius: 4px;
+    background: $lp-gold;
+    color: $lp-navy;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 14px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include max(xl) {
+      gap: 40px;
+    }
+    @include max(lg) {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      max-width: 584px;
+    }
+  }
+
+  &__img {
+    flex: 0 1 560px;
+    overflow: hidden;
+    border-radius: 8px;
+    @include max(lg) {
+      flex: none;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 560 / 441;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex: 0 1 584px;
+    flex-direction: column;
+    gap: 24px;
+    @include max(lg) {
+      flex: none;
+      width: 100%;
+    }
+    @include max(md) {
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+    @include max(md) {
+      font-size: 14px;
+    }
+  }
+
+  &__dates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    @include max(md) {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100%;
+    padding: 20px 24px;
+    border-radius: 8px;
+    background: #fff;
+    color: $lp-navy;
+    transition: box-shadow 0.3s, transform 0.3s;
+    @include max(md) {
+      padding: 16px 20px;
+    }
+
+    &[href]:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      transform: translateY(-2px);
+    }
+
+    &.is-full {
+      background: #dfe4ec;
+      color: $lp-gray;
+    }
+  }
+
+  &__date-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__date-num {
+    padding: 2px 8px;
+    border-radius: 2px;
+    background: $lp-pale-blue;
+    color: $lp-blue;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+
+  &__date-status {
+    color: $lp-red;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    &.is-few {
+      color: #d9822b;
+    }
+
+    &.is-full {
+      color: $lp-gray;
+    }
+  }
+
+  &__date-day {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 22px;
+    }
+  }
+
+  &__date-time {
+    color: $lp-text;
+    font-family: $lp-font-en;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    .is-full & {
+      color: $lp-gray;
+    }
+  }
+
+  &__empty {
+    padding: 20px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.7;
+    @include max(md) {
+      font-size: 14px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      @include max(md) {
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+
+    dt {
+      flex-shrink: 0;
+      width: 96px;
+      padding: 4px 0;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 2px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      text-align: center;
+      @include max(md) {
+        width: 76px;
+        font-size: 12px;
+      }
+    }
+
+    dd {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      @include max(md) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 導入事例 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-case {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include max(md) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__card {
+    overflow: hidden;
+    border: 1px solid #dbe3f0;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  &__img img {
+    width: 100%;
+    aspect-ratio: 588 / 300;
+    object-fit: cover;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 36px 40px 40px;
+    @include max(md) {
+      gap: 12px;
+      padding: 24px 20px 28px;
+    }
+  }
+
+  &__quote {
+    height: 38px;
+    color: $lp-gold;
+    font-family: $lp-font-en;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1;
+    @include max(md) {
+      height: 28px;
+      font-size: 48px;
+    }
+  }
+
+  &__voice {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    @include max(md) {
+      font-size: 16px;
+    }
+  }
+
+  &__tag {
+    padding: 6px 14px;
+    border-radius: 4px;
+    background: $lp-pale-blue;
+    color: $lp-blue;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 12px;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ FAQ ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-faq {
+  background: $lp-pale-blue;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 960px;
+    margin: 0 auto;
+    @include max(md) {
+      gap: 12px;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  &__q {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 32px;
+    cursor: pointer;
+    list-style: none;
+    @include max(md) {
+      gap: 12px;
+      padding: 16px;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $lp-navy;
+    color: #fff;
+    font-family: $lp-font-en;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    @include max(md) {
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+    }
+
+    &--a {
+      background: $lp-gold;
+      color: $lp-navy;
+    }
+  }
+
+  &__q-text {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    @include max(md) {
+      font-size: 15px;
+    }
+  }
+
+  // ＋／－アイコン
+  &__toggle {
+    position: relative;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 4px;
+      width: 16px;
+      height: 2px;
+      background: $lp-blue;
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    .lp-faq__item[open] &::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__a {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 76px 32px 32px;
+    border-top: 1px solid #e0e5f0;
+    @include max(md) {
+      gap: 12px;
+      padding: 16px 16px 20px;
+    }
+
+    p {
+      flex: 1;
+      color: $lp-text;
+      font-size: 16px;
+      line-height: 1.9;
+      letter-spacing: 0.02em;
+      @include max(md) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ お問い合わせ ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-contact {
+  .lp-sec__head {
+    margin-bottom: 48px;
+    @include max(md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__card {
+    max-width: 960px;
+    min-height: 400px;
+    margin: 0 auto;
+    padding: 64px 80px;
+    border-radius: 12px;
+    background: #fff;
+    color: $lp-navy;
+    @include max(lg) {
+      padding: 48px 40px;
+    }
+    @include max(md) {
+      padding: 24px 16px;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ フッター ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 48px 120px 136px; // 下部は追従CTAの分の余白
+  background: $lp-navy-dark;
+  @include max(lg) {
+    padding: 48px 40px 136px;
+  }
+  @include max(md) {
+    flex-direction: column;
+    padding: 32px 20px calc(104px + env(safe-area-inset-bottom));
+  }
+
+  &__logo img {
+    width: 200px;
+    @include max(md) {
+      width: 144px;
+    }
+  }
+
+  &__copy {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: $lp-font-en;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    @include max(md) {
+      font-size: 11px;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 追従CTA ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-fixed-cta {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 40px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: $lp-navy;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 16px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s, background-color 0.3s;
+  @include max(md) {
+    right: 16px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    left: 16px;
+    gap: 8px;
+    padding: 16px 12px;
+    font-size: 15px;
+    letter-spacing: 0;
+    transform: translateY(16px);
+  }
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+    @include max(md) {
+      transform: translateY(0);
+    }
+  }
+
+  &:hover {
+    background: $lp-blue;
+  }
+}
