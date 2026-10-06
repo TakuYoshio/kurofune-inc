@@ -290,6 +290,7 @@ body.lp .sp {
   .lp-fv__lead {
     font-size: 14px;
     letter-spacing: 0;
+    text-shadow: 0 1px 4px rgba(6, 46, 82, 0.8), 0 0 12px rgba(6, 46, 82, 0.6);
   }
 }
 .lp-fv__title {
@@ -418,6 +419,7 @@ body.lp .sp {
   border-radius: 50%;
   background: rgba(6, 46, 82, 0.9);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  color: #fff;
   text-align: center;
   white-space: nowrap;
 }
@@ -452,6 +454,19 @@ body.lp .sp {
   .lp-fv__authority::before {
     inset: 3px;
     border-radius: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .lp-fv__authority--fv {
+    display: none;
+  }
+}
+.lp-fv__authority--subcopy {
+  display: none;
+}
+@media (max-width: 768px) {
+  .lp-fv__authority--subcopy {
+    display: flex;
   }
 }
 .lp-fv__authority-row {
@@ -520,8 +535,10 @@ body.lp .sp {
 .lp-fv__bg-text {
   position: absolute;
   top: calc(100% - 100px);
-  left: 50%;
+  left: 0;
   z-index: 2;
+  width: 100%;
+  overflow: hidden;
   color: #214793;
   font-family: "Montserrat", sans-serif;
   font-size: 200px;
@@ -529,7 +546,6 @@ body.lp .sp {
   line-height: 1;
   white-space: nowrap;
   opacity: 0.3;
-  transform: translateX(-50%);
   pointer-events: none;
 }
 @media (max-width: 1024px) {
@@ -542,10 +558,36 @@ body.lp .sp {
   .lp-fv__bg-text {
     top: 100%;
     font-size: 80px;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
   }
 }
+.lp-fv__bg-text-track {
+  display: flex;
+  width: max-content;
+  animation: lp-marquee 40s linear infinite;
+}
+@media (max-width: 768px) {
+  .lp-fv__bg-text-track {
+    animation-duration: 24s;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-fv__bg-text-track {
+    animation: none;
+  }
+}
+.lp-fv__bg-text-track span {
+  padding-right: 0.4em;
+}
 
+@keyframes lp-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .lp-subcopy {
   display: flex;
   flex-direction: column;
@@ -582,9 +624,9 @@ body.lp .sp {
 }
 @media (max-width: 768px) {
   .lp-subcopy__points {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
     padding-top: 0;
   }
 }
@@ -601,25 +643,28 @@ body.lp .sp {
 }
 @media (max-width: 768px) {
   .lp-subcopy__points li {
-    gap: 12px;
-    padding: 0;
-    font-size: 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 2px;
+    font-size: 14px;
+    letter-spacing: 0;
   }
   .lp-subcopy__points li img {
-    width: 28px;
+    width: 24px;
   }
 }
 .lp-subcopy__points li + li {
   border-left: 1px solid #c7d4e5;
 }
-@media (max-width: 768px) {
-  .lp-subcopy__points li + li {
-    border-left: none;
-  }
-}
 .lp-subcopy__points small {
   font-size: 16px;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  .lp-subcopy__points small {
+    font-size: 10px;
+  }
 }
 
 .lp-problem {
@@ -962,11 +1007,11 @@ body.lp .sp {
 }
 
 .lp-price {
-  padding: 40px 20px 160px;
+  padding: 0 20px 160px;
 }
 @media (max-width: 768px) {
   .lp-price {
-    padding: 72px 20px;
+    padding: 0 20px 72px;
   }
 }
 .lp-price__illust {
@@ -1530,7 +1575,7 @@ body.lp .sp {
 .lp-faq__toggle::after {
   transform: rotate(90deg);
 }
-.lp-faq__item[open] .lp-faq__toggle::after {
+.lp-faq__item.is-open .lp-faq__toggle::after {
   transform: rotate(0deg);
 }
 .lp-faq__a {
@@ -1677,6 +1722,88 @@ body.lp .sp {
 }
 .lp-fixed-cta:hover {
   background: #214793;
+}
+
+.lp-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: #062e52;
+}
+.lp-password__card {
+  width: 100%;
+  max-width: 560px;
+  padding: 48px 40px;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .lp-password__card {
+    padding: 32px 20px;
+  }
+}
+.lp-password__en {
+  color: #214793;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2em;
+}
+.lp-password__title {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .lp-password__title {
+    font-size: 20px;
+  }
+}
+.lp-password .post-password-form {
+  margin-top: 24px;
+  color: #334052;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.lp-password .post-password-form p + p {
+  margin-top: 16px;
+}
+.lp-password .post-password-form label {
+  display: block;
+  color: #062e52;
+  font-weight: 700;
+  text-align: left;
+}
+.lp-password .post-password-form input[type=password] {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border: 1px solid #ccd6e5;
+  border-radius: 4px;
+  background: #f8fafc;
+  font-size: 16px;
+}
+.lp-password .post-password-form input[type=submit] {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #f7d978, #e8b83f);
+  color: #062e52;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.lp-password .post-password-form input[type=submit]:hover {
+  opacity: 0.85;
 }
 
 /*# sourceMappingURL=lp.css.map */

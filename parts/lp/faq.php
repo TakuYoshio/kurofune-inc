@@ -9,7 +9,7 @@ $faq = $args['faq'];
   </div>
   <div class="lp-faq__list">
     <?php foreach ($faq['items'] as $i => $item) : ?>
-      <details class="lp-faq__item"<?php echo $i === 0 ? ' open' : ''; ?>>
+      <details class="lp-faq__item<?php echo $i === 0 ? ' is-open' : ''; ?>"<?php echo $i === 0 ? ' open' : ''; ?>>
         <summary class="lp-faq__q">
           <span class="lp-faq__icon">Q</span>
           <span class="lp-faq__q-text"><?php echo kurofune_lp_text($item['q']); ?></span>

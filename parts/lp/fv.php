@@ -21,16 +21,14 @@ $common = get_theme_file_uri('images/lp/common/');
         <img src="<?php echo esc_url($common . 'icon-arrow-circle-white.svg'); ?>" alt="" width="24" height="24">
       </a>
     </div>
-    <div class="lp-fv__authority">
-      <div class="lp-fv__authority-row">
-        <p class="lp-fv__authority-stars">★ ★ ★</p>
-        <p class="lp-fv__authority-area"><?php echo esc_html($fv['authority']['area']); ?></p>
-      </div>
-      <div class="lp-fv__authority-row">
-        <p class="lp-fv__authority-text"><?php echo esc_html($fv['authority']['text']); ?></p>
-        <p class="lp-fv__authority-title"><?php echo esc_html($fv['authority']['title']); ?></p>
-      </div>
+    <?php get_template_part('parts/lp/authority', null, array('authority' => $fv['authority'], 'class' => 'lp-fv__authority--fv')); ?>
+  </div>
+  <div class="lp-fv__bg-text" aria-hidden="true">
+    <div class="lp-fv__bg-text-track">
+      <?php // 前半2つと後半2つを同じにして、-50%移動でつなぎ目なくループさせる ?>
+      <?php for ($i = 0; $i < 4; $i++) : ?>
+        <span>KUROFUNE INC.</span>
+      <?php endfor; ?>
     </div>
   </div>
-  <p class="lp-fv__bg-text" aria-hidden="true">KUROFUNE INC.</p>
 </section>

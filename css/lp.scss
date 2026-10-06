@@ -312,6 +312,8 @@ body.lp {
     @include max(md) {
       font-size: 14px;
       letter-spacing: 0;
+      // 写真の明るい部分に重なるため、SPのみ影を付けて読みやすくする
+      text-shadow: 0 1px 4px rgba(6, 46, 82, 0.8), 0 0 12px rgba(6, 46, 82, 0.6);
     }
   }
 
@@ -437,6 +439,7 @@ body.lp {
     border-radius: 50%;
     background: rgba($lp-navy, 0.9);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    color: #fff;
     text-align: center;
     white-space: nowrap;
     @include max(lg) {
@@ -467,6 +470,20 @@ body.lp {
         inset: 3px;
         border-radius: 6px;
       }
+    }
+  }
+
+  // PC：FV内の円形のみ／SP：サブコピー先頭の横長のみ
+  &__authority--fv {
+    @include max(md) {
+      display: none;
+    }
+  }
+
+  &__authority--subcopy {
+    display: none;
+    @include max(md) {
+      display: flex;
     }
   }
 
@@ -529,12 +546,14 @@ body.lp {
     }
   }
 
-  // 背景の「KUROFUNE INC.」
+  // 背景の「KUROFUNE INC.」（横に流れ続ける）
   &__bg-text {
     position: absolute;
     top: calc(100% - 100px);
-    left: 50%;
+    left: 0;
     z-index: 2;
+    width: 100%;
+    overflow: hidden;
     color: $lp-blue;
     font-family: $lp-font-en;
     font-size: 200px;
@@ -542,7 +561,6 @@ body.lp {
     line-height: 1;
     white-space: nowrap;
     opacity: 0.3;
-    transform: translateX(-50%);
     pointer-events: none;
     @include max(lg) {
       top: calc(100% - 64px);
@@ -551,8 +569,33 @@ body.lp {
     @include max(md) {
       top: 100%;
       font-size: 80px;
-      transform: translate(-50%, -50%);
+      transform: translateY(-50%);
     }
+  }
+
+  &__bg-text-track {
+    display: flex;
+    width: max-content;
+    animation: lp-marquee 40s linear infinite;
+    @include max(md) {
+      animation-duration: 24s;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+
+    span {
+      padding-right: 0.4em;
+    }
+  }
+}
+
+@keyframes lp-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -589,9 +632,9 @@ body.lp {
     align-items: center;
     padding-top: 12px;
     @include max(md) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
       padding-top: 0;
     }
 
@@ -606,26 +649,29 @@ body.lp {
       letter-spacing: 0.04em;
       white-space: nowrap;
       @include max(md) {
-        gap: 12px;
-        padding: 0;
-        font-size: 20px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        padding: 4px 2px;
+        font-size: 14px;
+        letter-spacing: 0;
 
         img {
-          width: 28px;
+          width: 24px;
         }
       }
 
       & + li {
         border-left: 1px solid #c7d4e5;
-        @include max(md) {
-          border-left: none;
-        }
       }
     }
 
     small {
       font-size: 16px;
       font-weight: 700;
+      @include max(md) {
+        font-size: 10px;
+      }
     }
   }
 }
@@ -971,9 +1017,9 @@ body.lp {
 
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 料金体系 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 .lp-price {
-  padding: 40px 20px 160px;
+  padding: 0 20px 160px;
   @include max(md) {
-    padding: 72px 20px;
+    padding: 0 20px 72px;
   }
 
   &__illust {
@@ -1539,7 +1585,7 @@ body.lp {
       transform: rotate(90deg);
     }
 
-    .lp-faq__item[open] &::after {
+    .lp-faq__item.is-open &::after {
       transform: rotate(0deg);
     }
   }
@@ -1677,5 +1723,94 @@ body.lp {
 
   &:hover {
     background: $lp-blue;
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ パスワード保護画面 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.lp-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: $lp-navy;
+
+  &__card {
+    width: 100%;
+    max-width: 560px;
+    padding: 48px 40px;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+    @include max(md) {
+      padding: 32px 20px;
+    }
+  }
+
+  &__en {
+    color: $lp-blue;
+    font-family: $lp-font-en;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.2em;
+  }
+
+  &__title {
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    @include max(md) {
+      font-size: 20px;
+    }
+  }
+
+  // WordPress標準のパスワードフォーム
+  .post-password-form {
+    margin-top: 24px;
+    color: $lp-text;
+    font-size: 15px;
+    line-height: 1.8;
+
+    p + p {
+      margin-top: 16px;
+    }
+
+    label {
+      display: block;
+      color: $lp-navy;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    input[type="password"] {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      padding: 12px 16px;
+      border: 1px solid #ccd6e5;
+      border-radius: 4px;
+      background: #f8fafc;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      margin-top: 16px;
+      padding: 14px 24px;
+      border-radius: 4px;
+      background: $lp-gold-gradient;
+      color: $lp-navy;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
   }
 }

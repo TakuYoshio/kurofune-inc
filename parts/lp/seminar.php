@@ -1,7 +1,7 @@
 <?php
 /** オンライン説明会（日程は管理画面「オンライン説明会」から取得） */
 $seminar  = $args['seminar'];
-$schedule = kurofune_get_upcoming_seminars($args['slug']);
+$schedule = kurofune_get_upcoming_seminars($args['industry']);
 
 // 下部ボタンは、申し込み可能な直近の説明会へ。無ければフォームへ
 $apply_url = '';
