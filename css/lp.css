@@ -1724,4 +1724,86 @@ body.lp .sp {
   background: #214793;
 }
 
+.lp-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: #062e52;
+}
+.lp-password__card {
+  width: 100%;
+  max-width: 560px;
+  padding: 48px 40px;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .lp-password__card {
+    padding: 32px 20px;
+  }
+}
+.lp-password__en {
+  color: #214793;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2em;
+}
+.lp-password__title {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .lp-password__title {
+    font-size: 20px;
+  }
+}
+.lp-password .post-password-form {
+  margin-top: 24px;
+  color: #334052;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.lp-password .post-password-form p + p {
+  margin-top: 16px;
+}
+.lp-password .post-password-form label {
+  display: block;
+  color: #062e52;
+  font-weight: 700;
+  text-align: left;
+}
+.lp-password .post-password-form input[type=password] {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border: 1px solid #ccd6e5;
+  border-radius: 4px;
+  background: #f8fafc;
+  font-size: 16px;
+}
+.lp-password .post-password-form input[type=submit] {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #f7d978, #e8b83f);
+  color: #062e52;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.lp-password .post-password-form input[type=submit]:hover {
+  opacity: 0.85;
+}
+
 /*# sourceMappingURL=lp.css.map */

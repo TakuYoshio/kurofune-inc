@@ -25,7 +25,7 @@
       var cta = document.getElementById('lp-fixed-cta');
       var fvBtn = document.querySelector('.lp-fv__btn');
       var contact = document.getElementById('contact');
-      if (!cta || !('IntersectionObserver' in window)) return;
+      if (!cta || !fvBtn || !('IntersectionObserver' in window)) return;
       var visible = { fv: true, contact: false };
       var render = function () {
         var show = !visible.fv && !visible.contact;

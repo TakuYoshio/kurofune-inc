@@ -1,10 +1,17 @@
-<?php $lp = kurofune_get_lp(); ?>
+<?php
+$lp = kurofune_get_lp();
+// パスワード保護中（正式公開前）は検索エンジンに載せない
+$lp_protected = (bool) get_post_field('post_password', get_queried_object_id());
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title><?php echo esc_html($lp['meta']['title']); ?></title>
+  <?php if ($lp_protected) : ?>
+    <meta name="robots" content="noindex, nofollow">
+  <?php endif; ?>
   <meta name="description" content="<?php echo esc_attr($lp['meta']['description']); ?>">
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?php echo esc_attr($lp['meta']['title']); ?>">
@@ -26,5 +33,7 @@
     <a href="<?php echo esc_url(home_url('/')); ?>" class="lp-header__logo">
       <img src="<?php echo get_theme_file_uri('images/Logo-white.svg'); ?>" alt="KUROFUNE" width="200" height="32">
     </a>
-    <a href="#contact" class="lp-header__btn">無料で問い合わせる</a>
+    <?php if (!post_password_required()) : ?>
+      <a href="#contact" class="lp-header__btn">無料で問い合わせる</a>
+    <?php endif; ?>
   </header>
