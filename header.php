@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php get_template_part('parts/gtm-head'); ?>
   <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/destyle.css'); ?>">
   <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/common.css'); ?>">
   <?php /*?>トップページの場合<?php */?>
@@ -36,6 +37,7 @@
   <?php wp_head(); ?>
 </head>
 <body>
+  <?php get_template_part('parts/gtm-body'); ?>
   <div class="wrap">
     <header id="header">
       <div class="header-container">

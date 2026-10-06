@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php get_template_part('parts/gtm-head'); ?>
   <?php /*?>ウェルカム画面はブラウザを開いている間は初回のみ表示（描画前に判定してちらつきを防ぐ）<?php */?>
   <script>
     try {
@@ -33,6 +34,7 @@
   <?php wp_head(); ?>
 </head>
 <body>
+  <?php get_template_part('parts/gtm-body'); ?>
   <!-- ロゴのローディング -->
   <div id="loading">
     <div class="loading-logo">

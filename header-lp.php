@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <?php get_template_part('parts/gtm-head'); ?>
   <title><?php echo esc_html($lp['meta']['title']); ?></title>
   <meta name="description" content="<?php echo esc_attr($lp['meta']['description']); ?>">
   <meta property="og:type" content="website">
@@ -22,6 +23,7 @@
   <?php wp_head(); ?>
 </head>
 <body class="lp">
+  <?php get_template_part('parts/gtm-body'); ?>
   <header class="lp-header" id="lp-header">
     <a href="<?php echo esc_url(home_url('/')); ?>" class="lp-header__logo">
       <img src="<?php echo get_theme_file_uri('images/Logo-white.svg'); ?>" alt="KUROFUNE" width="200" height="32">
