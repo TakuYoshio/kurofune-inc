@@ -44,6 +44,40 @@
       observe(contact, 'contact');
       render();
     })();
+
+    // FAQ：開閉を高さアニメーションでなめらかに
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('.lp-faq__item').forEach(function (item) {
+        var summary = item.querySelector('summary');
+        var answer = item.querySelector('.lp-faq__a');
+        var anim = null;
+        summary.addEventListener('click', function (e) {
+          e.preventDefault();
+          var opening = !item.classList.contains('is-open');
+          item.classList.toggle('is-open', opening);
+          if (reduce || !answer.animate) {
+            item.open = opening;
+            return;
+          }
+          // 途中で反転した場合は現在の高さから始める
+          var from = anim ? answer.getBoundingClientRect().height : (opening ? 0 : answer.offsetHeight);
+          if (anim) anim.cancel();
+          item.open = true;
+          var to = opening ? answer.scrollHeight : 0;
+          anim = answer.animate(
+            [{ height: from + 'px', opacity: opening ? 0 : 1 }, { height: to + 'px', opacity: opening ? 1 : 0 }],
+            { duration: 320, easing: 'cubic-bezier(0.25, 0.8, 0.25, 1)' }
+          );
+          answer.style.overflow = 'hidden';
+          anim.onfinish = function () {
+            anim = null;
+            answer.style.overflow = '';
+            item.open = opening;
+          };
+        });
+      });
+    })();
   </script>
 </body>
 </html>

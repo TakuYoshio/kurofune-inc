@@ -418,6 +418,7 @@ body.lp .sp {
   border-radius: 50%;
   background: rgba(6, 46, 82, 0.9);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  color: #fff;
   text-align: center;
   white-space: nowrap;
 }
@@ -452,6 +453,19 @@ body.lp .sp {
   .lp-fv__authority::before {
     inset: 3px;
     border-radius: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .lp-fv__authority--fv {
+    display: none;
+  }
+}
+.lp-fv__authority--subcopy {
+  display: none;
+}
+@media (max-width: 768px) {
+  .lp-fv__authority--subcopy {
+    display: flex;
   }
 }
 .lp-fv__authority-row {
@@ -582,9 +596,9 @@ body.lp .sp {
 }
 @media (max-width: 768px) {
   .lp-subcopy__points {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
     padding-top: 0;
   }
 }
@@ -601,25 +615,28 @@ body.lp .sp {
 }
 @media (max-width: 768px) {
   .lp-subcopy__points li {
-    gap: 12px;
-    padding: 0;
-    font-size: 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 2px;
+    font-size: 14px;
+    letter-spacing: 0;
   }
   .lp-subcopy__points li img {
-    width: 28px;
+    width: 24px;
   }
 }
 .lp-subcopy__points li + li {
   border-left: 1px solid #c7d4e5;
 }
-@media (max-width: 768px) {
-  .lp-subcopy__points li + li {
-    border-left: none;
-  }
-}
 .lp-subcopy__points small {
   font-size: 16px;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  .lp-subcopy__points small {
+    font-size: 10px;
+  }
 }
 
 .lp-problem {
@@ -1530,7 +1547,7 @@ body.lp .sp {
 .lp-faq__toggle::after {
   transform: rotate(90deg);
 }
-.lp-faq__item[open] .lp-faq__toggle::after {
+.lp-faq__item.is-open .lp-faq__toggle::after {
   transform: rotate(0deg);
 }
 .lp-faq__a {
