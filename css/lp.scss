@@ -312,6 +312,8 @@ body.lp {
     @include max(md) {
       font-size: 14px;
       letter-spacing: 0;
+      // 写真の明るい部分に重なるため、SPのみ影を付けて読みやすくする
+      text-shadow: 0 1px 4px rgba(6, 46, 82, 0.8), 0 0 12px rgba(6, 46, 82, 0.6);
     }
   }
 
