@@ -148,6 +148,20 @@ function kurofune_register_fields() {
         'type'         => 'text',
         'instructions' => '未入力の場合は、お問い合わせページと同じフォームを表示します。',
       ),
+      array(
+        'key'           => 'field_kurofune_lp_industry',
+        'label'         => '表示する説明会の対象業種',
+        'name'          => 'lp_industry',
+        'type'          => 'taxonomy',
+        'taxonomy'      => 'industry',
+        'field_type'    => 'select',
+        'return_format' => 'id',
+        'allow_null'    => 1,
+        'add_term'      => 0,
+        'save_terms'    => 0,
+        'load_terms'    => 0,
+        'instructions'  => 'このLPに表示する説明会の対象業種を選んでください。未選択の場合は、LPと同じスラッグの対象業種の説明会を表示します。',
+      ),
     ),
     'location' => array(
       array(
@@ -214,7 +228,11 @@ function kurofune_get_upcoming_seminars($industry, $limit = 4) {
     'posts_per_page' => $limit,
     'no_found_rows'  => true,
     'tax_query'      => array(
-      array('taxonomy' => 'industry', 'field' => 'slug', 'terms' => $industry),
+      array(
+        'taxonomy' => 'industry',
+        'field'    => is_numeric($industry) ? 'term_id' : 'slug',
+        'terms'    => is_numeric($industry) ? (int) $industry : $industry,
+      ),
     ),
     'meta_query'     => array(
       'seminar_date' => array(
@@ -296,6 +314,9 @@ function kurofune_get_lp() {
   $lp          = require $file;
   $lp['slug']  = $slug;
   $form_id     = function_exists('get_field') ? get_field('lp_hs_form_id', $post_id) : '';
+  $industry    = function_exists('get_field') ? get_field('lp_industry', $post_id) : '';
+  // 説明会の絞り込み：LP編集画面で選んだ対象業種（ID）、未選択ならLPのスラッグ
+  $lp['industry'] = $industry ? (int) $industry : $slug;
   $lp['form']  = array(
     'portal_id' => '43920249',
     'form_id'   => $form_id ?: 'a797225a-ddb4-46ab-bfe3-28d33fcc941d',
