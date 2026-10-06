@@ -23,5 +23,12 @@ $common = get_theme_file_uri('images/lp/common/');
     </div>
     <?php get_template_part('parts/lp/authority', null, array('authority' => $fv['authority'], 'class' => 'lp-fv__authority--fv')); ?>
   </div>
-  <p class="lp-fv__bg-text" aria-hidden="true">KUROFUNE INC.</p>
+  <div class="lp-fv__bg-text" aria-hidden="true">
+    <div class="lp-fv__bg-text-track">
+      <?php // 前半2つと後半2つを同じにして、-50%移動でつなぎ目なくループさせる ?>
+      <?php for ($i = 0; $i < 4; $i++) : ?>
+        <span>KUROFUNE INC.</span>
+      <?php endfor; ?>
+    </div>
+  </div>
 </section>

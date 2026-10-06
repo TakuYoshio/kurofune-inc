@@ -544,12 +544,14 @@ body.lp {
     }
   }
 
-  // 背景の「KUROFUNE INC.」
+  // 背景の「KUROFUNE INC.」（横に流れ続ける）
   &__bg-text {
     position: absolute;
     top: calc(100% - 100px);
-    left: 50%;
+    left: 0;
     z-index: 2;
+    width: 100%;
+    overflow: hidden;
     color: $lp-blue;
     font-family: $lp-font-en;
     font-size: 200px;
@@ -557,7 +559,6 @@ body.lp {
     line-height: 1;
     white-space: nowrap;
     opacity: 0.3;
-    transform: translateX(-50%);
     pointer-events: none;
     @include max(lg) {
       top: calc(100% - 64px);
@@ -566,8 +567,33 @@ body.lp {
     @include max(md) {
       top: 100%;
       font-size: 80px;
-      transform: translate(-50%, -50%);
+      transform: translateY(-50%);
     }
+  }
+
+  &__bg-text-track {
+    display: flex;
+    width: max-content;
+    animation: lp-marquee 40s linear infinite;
+    @include max(md) {
+      animation-duration: 24s;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+
+    span {
+      padding-right: 0.4em;
+    }
+  }
+}
+
+@keyframes lp-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -989,9 +1015,9 @@ body.lp {
 
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 料金体系 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 .lp-price {
-  padding: 40px 20px 160px;
+  padding: 0 20px 160px;
   @include max(md) {
-    padding: 72px 20px;
+    padding: 0 20px 72px;
   }
 
   &__illust {

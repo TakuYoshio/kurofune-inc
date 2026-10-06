@@ -534,8 +534,10 @@ body.lp .sp {
 .lp-fv__bg-text {
   position: absolute;
   top: calc(100% - 100px);
-  left: 50%;
+  left: 0;
   z-index: 2;
+  width: 100%;
+  overflow: hidden;
   color: #214793;
   font-family: "Montserrat", sans-serif;
   font-size: 200px;
@@ -543,7 +545,6 @@ body.lp .sp {
   line-height: 1;
   white-space: nowrap;
   opacity: 0.3;
-  transform: translateX(-50%);
   pointer-events: none;
 }
 @media (max-width: 1024px) {
@@ -556,10 +557,36 @@ body.lp .sp {
   .lp-fv__bg-text {
     top: 100%;
     font-size: 80px;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
   }
 }
+.lp-fv__bg-text-track {
+  display: flex;
+  width: max-content;
+  animation: lp-marquee 40s linear infinite;
+}
+@media (max-width: 768px) {
+  .lp-fv__bg-text-track {
+    animation-duration: 24s;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-fv__bg-text-track {
+    animation: none;
+  }
+}
+.lp-fv__bg-text-track span {
+  padding-right: 0.4em;
+}
 
+@keyframes lp-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .lp-subcopy {
   display: flex;
   flex-direction: column;
@@ -979,11 +1006,11 @@ body.lp .sp {
 }
 
 .lp-price {
-  padding: 40px 20px 160px;
+  padding: 0 20px 160px;
 }
 @media (max-width: 768px) {
   .lp-price {
-    padding: 72px 20px;
+    padding: 0 20px 72px;
   }
 }
 .lp-price__illust {
