@@ -334,3 +334,25 @@ function kurofune_lp_text($text) {
     'span' => array('class' => true),
   ));
 }
+
+/* =====================================================================
+ * SEO（title / meta description）
+ * ===================================================================== */
+define('KUROFUNE_SEO_TITLE', '特定技能・外国人材の紹介と定着支援なら｜KUROFUNE株式会社');
+define('KUROFUNE_SEO_DESCRIPTION', '特定技能に特化した外国人材紹介・就労支援のKUROFUNE株式会社。求職者向けアプリ「KUROFUNE WORK」と定着支援アプリ「KUROFUNE PASSPORT」を活用し、採用から生活支援まで一気通貫でサポートします。');
+
+/**
+ * 下層ページのタイトル（「ページ名｜KUROFUNE株式会社」）
+ */
+function kurofune_seo_title() {
+  if (is_404()) {
+    $page_title = 'ページが見つかりません';
+  } elseif (is_post_type_archive()) {
+    $page_title = post_type_archive_title('', false);
+  } elseif (is_singular()) {
+    $page_title = get_the_title();
+  } else {
+    $page_title = '';
+  }
+  return $page_title ? $page_title . '｜KUROFUNE株式会社' : KUROFUNE_SEO_TITLE;
+}
