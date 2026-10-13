@@ -17,11 +17,11 @@
   <?php if ( is_page('contact') ): ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/contact.css'); ?>">
   <?php endif; ?>
-  <?php if ( is_page( array('privacy-policy', 'thanks') ) || is_404() ): ?>
+  <?php if ( is_page('privacy-policy') || kurofune_is_thanks_page() || is_404() ): ?>
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/privacy.css'); ?>">
   <?php endif; ?>
-  <?php /*?>サンクスページは検索結果に表示させない<?php */?>
-  <?php if ( is_page('thanks') ): ?>
+  <?php /*?>サンクスページ（業種別含む）は検索結果に表示させない<?php */?>
+  <?php if ( kurofune_is_thanks_page() ): ?>
     <meta name="robots" content="noindex, nofollow">
   <?php endif; ?>
   <!-- ============ Google font ============ -->

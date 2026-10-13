@@ -68,6 +68,29 @@ function kurofune_flush_rewrite() {
 add_action('after_switch_theme', 'kurofune_flush_rewrite');
 
 /* =====================================================================
+ * サンクスページ
+ * ===================================================================== */
+/**
+ * サンクスページか（/thanks/ と業種別の /thanks-{業種}/）
+ */
+function kurofune_is_thanks_page() {
+  if (!is_page()) {
+    return false;
+  }
+  $slug = get_post_field('post_name', get_queried_object_id());
+  return $slug === 'thanks' || strpos($slug, 'thanks-') === 0;
+}
+
+// 業種別サンクスページ（/thanks-{業種}/）にも page-thanks.php を使う
+function kurofune_thanks_template($templates) {
+  if (kurofune_is_thanks_page() && !in_array('page-thanks.php', $templates, true)) {
+    array_splice($templates, 1, 0, 'page-thanks.php');
+  }
+  return $templates;
+}
+add_filter('page_template_hierarchy', 'kurofune_thanks_template');
+
+/* =====================================================================
  * カスタムフィールド（ACF）
  * ===================================================================== */
 function kurofune_register_fields() {
