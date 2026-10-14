@@ -2,7 +2,10 @@
     <a href="<?php echo esc_url(home_url('/')); ?>" class="lp-footer__logo">
       <img src="<?php echo get_theme_file_uri('images/Logo-white.svg'); ?>" alt="KUROFUNE" width="200" height="32" loading="lazy">
     </a>
-    <small class="lp-footer__copy">&copy; KUROFUNE Inc. All Rights Reserved.</small>
+    <div class="lp-footer__meta">
+      <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>" class="lp-footer__link" target="_blank" rel="noopener">プライバシーポリシー</a>
+      <small class="lp-footer__copy">&copy; KUROFUNE Inc. All Rights Reserved.</small>
+    </div>
   </footer>
   <a href="#contact" class="lp-fixed-cta" id="lp-fixed-cta" aria-hidden="true" tabindex="-1">
     <span>今すぐ無料で問い合わせる (最短1分)</span>
