@@ -1429,6 +1429,14 @@ body.lp {
     border: 1px solid #dbe3f0;
     border-radius: 8px;
     background: #fff;
+
+    // 1件のみの場合は中央に配置
+    &:only-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: 100%;
+      max-width: 800px;
+    }
   }
 
   &__img img {
@@ -1446,19 +1454,6 @@ body.lp {
     @include max(md) {
       gap: 12px;
       padding: 24px 20px 28px;
-    }
-  }
-
-  &__quote {
-    height: 38px;
-    color: $lp-gold;
-    font-family: $lp-font-en;
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 1;
-    @include max(md) {
-      height: 28px;
-      font-size: 48px;
     }
   }
 
@@ -1483,6 +1478,15 @@ body.lp {
     letter-spacing: 0.04em;
     @include max(md) {
       font-size: 12px;
+    }
+  }
+
+  &__note {
+    color: rgba($lp-navy, 0.7);
+    font-size: 13px;
+    line-height: 1.6;
+    @include max(md) {
+      font-size: 11px;
     }
   }
 }
@@ -1660,6 +1664,32 @@ body.lp {
     width: 200px;
     @include max(md) {
       width: 144px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    @include max(md) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+    &:hover {
+      color: #fff;
+    }
+    @include max(md) {
+      font-size: 11px;
     }
   }
 
