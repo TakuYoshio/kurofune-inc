@@ -8,6 +8,7 @@ $common = get_theme_file_uri('images/lp/common/');
   <div class="lp-sec__head">
     <p class="lp-sec__en">PRICE</p>
     <h2 class="lp-sec__title">業界の常識を覆す、明朗会計</h2>
+    <p class="lp-sec__lead">※採用にかかる実費（ビザ申請費用、面接会渡航費など）については別途お見積いたします。</p>
   </div>
   <div class="lp-price__cards">
     <div class="lp-price__card lp-price__card--fee">
@@ -19,7 +20,6 @@ $common = get_theme_file_uri('images/lp/common/');
     <div class="lp-price__card lp-price__card--monthly">
       <p class="lp-price__label">定着支援費用（月額）</p>
       <p class="lp-price__value"><span class="lp-price__num">19,800</span><span class="lp-price__unit">円 / 人</span></p>
-      <p class="lp-price__note">入社後のオンライン定着支援費用のみ</p>
     </div>
   </div>
   <p class="lp-price__caption">※自社スキームの効率化により手数料0円を実現しています。</p>
