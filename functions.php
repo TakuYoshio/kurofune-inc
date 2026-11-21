@@ -348,13 +348,16 @@ function kurofune_get_lp() {
 }
 
 /**
- * 設定ファイル内の文言を出力用に整形（<br> <em> <span> のみ許可）
+ * 設定ファイル内の文言を出力用に整形（<br> <em> <span> <b> <strong> <mark> のみ許可）
  */
 function kurofune_lp_text($text) {
   return wp_kses($text, array(
-    'br'   => array('class' => true),
-    'em'   => array(),
-    'span' => array('class' => true),
+    'br'     => array('class' => true),
+    'em'     => array(),
+    'span'   => array('class' => true),
+    'b'      => array(),
+    'strong' => array(),
+    'mark'   => array(),
   ));
 }
 
