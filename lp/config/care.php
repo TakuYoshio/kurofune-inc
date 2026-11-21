@@ -54,7 +54,7 @@ return array(
   ),
 
   'solution' => array(
-    'title'  => 'その課題、KUROFUNEの<br><em>「業界特化型 現地育成プログラム」</em>で<br>すべて解決します！',
+    'title'  => 'その課題、KUROFUNEの<br><em>「介護特化型 現地育成プログラム」</em>で<br>すべて解決します！',
     'points' => array(
       array(
         'image' => $img . 'point01.webp',
@@ -83,7 +83,6 @@ return array(
   // tag：オレンジ枠＋タグ付きの重要ステップ
   'flow' => array(
     'title' => 'なぜ<em>「費用倒れ・ミスマッチ」</em>が起きないのか？<br class="sp-br">画期的な<span class="big8">8</span>ステップ',
-    'keys'  => array('STEP 2　事前面談による合格者の選定', 'STEP 6　試験合格者のみビザ申請'),
     'steps' => array(
       array(
         'icon'  => 'doc',

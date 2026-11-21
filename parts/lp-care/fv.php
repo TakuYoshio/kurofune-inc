@@ -4,7 +4,7 @@ $fv = $args['fv'];
 ?>
 <section class="fv" aria-labelledby="fv-title">
   <figure class="fv__photo js-load" style="--d:0">
-    <img src="<?php echo esc_url(get_theme_file_uri($fv['image'])); ?>" alt="<?php echo esc_attr($fv['image_alt']); ?>" width="640" height="427" fetchpriority="high">
+    <img src="<?php echo esc_url(get_theme_file_uri($fv['image'])); ?>" alt="<?php echo esc_attr($fv['image_alt']); ?>" width="1280" height="854" fetchpriority="high">
     <div class="fv__badge js-load" style="--d:7">
       <?php get_template_part('parts/lp-care/badge-art'); ?>
       <p class="fv__badge-text"><?php echo kurofune_lp_text($fv['badge']); ?><b><?php echo esc_html($fv['badge_strong']); ?></b></p>

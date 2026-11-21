@@ -957,30 +957,6 @@ body.lp-care .flow__head .sec__title .big8 {
   margin: 0 2px;
   vertical-align: -0.06em;
 }
-body.lp-care .flow__keys {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 12px;
-  margin-top: 20px;
-}
-body.lp-care .flow__keys li {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: var(--pill);
-  background: var(--o-50);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--brown-900);
-}
-body.lp-care .flow__keys i {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--o-500);
-}
 body.lp-care .steps {
   display: grid;
   gap: 18px;
@@ -989,9 +965,6 @@ body.lp-care .steps {
 }
 body.lp-care .step {
   position: relative;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
   padding: 20px 18px;
   border-radius: var(--r-md);
   background: var(--white);
@@ -1017,6 +990,11 @@ body.lp-care .step__icon {
 body.lp-care .step__icon svg {
   width: 30px;
   height: 30px;
+}
+body.lp-care .step__main {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
 }
 body.lp-care .step__card {
   flex: 1;
@@ -1091,10 +1069,12 @@ body.lp-care .flow__cta {
     margin-top: 56px;
   }
   body.lp-care .step {
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     padding: 30px 20px 26px;
+  }
+  body.lp-care .step__main {
+    flex-direction: column;
+    align-items: center;
   }
   body.lp-care .step__icon {
     width: 84px;
@@ -1159,6 +1139,7 @@ body.lp-care .price__cards {
 body.lp-care .pcard {
   position: relative;
   padding: 36px 24px 30px;
+  border: 3px solid transparent;
   border-radius: var(--r-lg);
   background: var(--white);
   box-shadow: var(--shadow);
@@ -1189,6 +1170,7 @@ body.lp-care .pcard__label {
   color: var(--brown-900);
 }
 body.lp-care .pcard__value {
+  min-height: 110px;
   margin-top: 10px;
   display: flex;
   align-items: flex-end;
@@ -1688,7 +1670,27 @@ body.lp-care .sticky-cta .btn-cta {
 }
 @media (min-width: 768px) {
   body.lp-care .sticky-cta {
-    display: none;
+    left: 50%;
+    right: auto;
+    bottom: 24px;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 16px);
+    transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
+  }
+  body.lp-care .sticky-cta.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+  body.lp-care .sticky-cta .btn-cta {
+    min-height: 70px;
+    font-size: 19px;
+    white-space: nowrap;
+    box-shadow: 0 12px 30px rgba(120, 60, 10, 0.35);
   }
 }
 body.lp-care .js-load {
