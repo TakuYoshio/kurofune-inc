@@ -277,11 +277,11 @@ body.lp-care{
   .pcard--zero{background:linear-gradient(var(--white),var(--white)) padding-box,var(--grad) border-box;border:3px solid transparent;}
   .pcard__ribbon{position:absolute;top:-15px;left:50%;transform:translateX(-50%);padding:5px 20px;border-radius:var(--pill);background:var(--grad);color:var(--white);font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.12em;box-shadow:var(--shadow-o);}
   .pcard__label{font-size:17px;font-weight:900;color:var(--brown-900);}
-  .pcard__value{min-height:110px;margin-top:10px;display:flex;align-items:flex-end;justify-content:center;gap:6px;line-height:1;color:var(--brown-900);}
+  .pcard__value{min-height:110px;margin-top:10px;display:flex;flex-wrap:wrap;align-content:center;align-items:baseline;justify-content:center;gap:6px;line-height:1;color:var(--brown-900);}
   .pcard__value .big0{font-family:var(--font-en);font-size:110px;font-weight:800;background:var(--grad-v);-webkit-background-clip:text;background-clip:text;color:transparent;}
   .pcard__value .num{font-family:var(--font-en);font-size:60px;font-weight:800;}
-  .pcard__value .unit{font-size:26px;font-weight:900;margin-bottom:8px;}
-  .pcard__value .per{font-size:16px;font-weight:700;margin-bottom:10px;}
+  .pcard__value .unit{font-size:26px;font-weight:900;}
+  .pcard__value .per{font-size:16px;font-weight:700;}
   .pcard__sub{display:inline-block;margin-top:18px;padding:6px 16px;border-radius:var(--pill);background:var(--o-50);font-size:13px;font-weight:700;color:var(--brown-900);}
   .price__foot{margin-top:24px;text-align:center;font-size:13px;color:var(--ink-soft);}
   @media (min-width:768px){ .price__cards{grid-template-columns:1fr 1fr;} }

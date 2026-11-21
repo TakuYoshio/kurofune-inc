@@ -1173,7 +1173,9 @@ body.lp-care .pcard__value {
   min-height: 110px;
   margin-top: 10px;
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: baseline;
   justify-content: center;
   gap: 6px;
   line-height: 1;
@@ -1196,12 +1198,10 @@ body.lp-care .pcard__value .num {
 body.lp-care .pcard__value .unit {
   font-size: 26px;
   font-weight: 900;
-  margin-bottom: 8px;
 }
 body.lp-care .pcard__value .per {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 10px;
 }
 body.lp-care .pcard__sub {
   display: inline-block;
