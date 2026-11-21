@@ -112,6 +112,17 @@ body.lp-care .sp-br {
     display: none;
   }
 }
+body.lp-care .pc-br {
+  display: none;
+}
+body.lp-care .nb {
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  body.lp-care .pc-br {
+    display: inline;
+  }
+}
 body.lp-care :focus-visible {
   outline: 3px solid var(--o-500);
   outline-offset: 3px;
@@ -959,7 +970,7 @@ body.lp-care .flow__head .sec__title .big8 {
 }
 body.lp-care .steps {
   display: grid;
-  gap: 18px;
+  gap: 30px;
   margin-top: 40px;
   counter-reset: s;
 }
@@ -1047,13 +1058,13 @@ body.lp-care .step mark {
 body.lp-care .step:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: 48px;
-  bottom: -14px;
+  left: 50%;
+  bottom: -22px;
   width: 12px;
   height: 12px;
   border-right: 2.5px solid var(--o-400);
   border-bottom: 2.5px solid var(--o-400);
-  transform: rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
 }
 body.lp-care .flow__cta {
   margin-top: 40px;

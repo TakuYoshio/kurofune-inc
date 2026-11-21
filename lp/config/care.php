@@ -58,7 +58,8 @@ return array(
   ),
 
   'solution' => array(
-    'title'  => 'その課題、KUROFUNEの<br><em>「介護特化型 現地育成プログラム」</em>で<br>すべて解決します！',
+    // <span class="nb">：この中では改行しない（SPで語の途中で折り返さないように）。<br class="pc-br">：PCのみ改行
+    'title'  => '<span class="nb">その課題、</span><span class="nb">KUROFUNEの</span><br class="pc-br"><span class="nb"><em>「介護特化型</em></span><em> </em><span class="nb"><em>現地育成プログラム」</em>で</span><br class="pc-br"><span class="nb">すべて解決します！</span>',
     'points' => array(
       array(
         'image' => $img . 'point01.webp',
