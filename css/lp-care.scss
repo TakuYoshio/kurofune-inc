@@ -48,6 +48,9 @@ body.lp-care{
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
   .sp-br{display:inline;}
   @media (min-width:768px){ .sp-br{display:none;} }
+  .pc-br{display:none;}
+  .nb{display:inline-block;}
+  @media (min-width:768px){ .pc-br{display:inline;} }
   :focus-visible{outline:3px solid var(--o-500);outline-offset:3px;}
 
   /* ---------- common ---------- */
@@ -238,7 +241,7 @@ body.lp-care{
   .flow{background:var(--white);}
   .flow__head{text-align:center;}
   .flow__head .sec__title .big8{font-family:var(--font-en);font-size:1.6em;line-height:1;color:var(--o-600);margin:0 2px;vertical-align:-.06em;}
-  .steps{display:grid;gap:18px;margin-top:40px;counter-reset:s;}
+  .steps{display:grid;gap:30px;margin-top:40px;counter-reset:s;}
   .step{position:relative;padding:20px 18px;border-radius:var(--r-md);background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--line);}
   .step.is-key{border:2px solid var(--o-500);background:linear-gradient(180deg,#FFFFFF,var(--o-50));}
   .step__icon{flex:none;display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:var(--white);border:2px solid var(--o-100);box-shadow:var(--shadow-sm);color:var(--o-500);}
@@ -251,7 +254,7 @@ body.lp-care{
   .step h3{margin-top:2px;font-size:16px;font-weight:900;line-height:1.5;color:var(--brown-900);}
   .step p{margin-top:8px;font-size:13px;line-height:1.8;color:var(--ink-soft);}
   .step mark{background:linear-gradient(transparent 60%,#FFD9B8 60%);color:inherit;font-weight:700;}
-  .step:not(:last-child)::after{content:"";position:absolute;left:48px;bottom:-14px;width:12px;height:12px;border-right:2.5px solid var(--o-400);border-bottom:2.5px solid var(--o-400);transform:rotate(45deg);}
+  .step:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-22px;width:12px;height:12px;border-right:2.5px solid var(--o-400);border-bottom:2.5px solid var(--o-400);transform:translateX(-50%) rotate(45deg);}
   .flow__cta{margin-top:40px;text-align:center;}
   @media (min-width:1080px){
     .flow__head .sec__title{font-size:36px;}
