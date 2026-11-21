@@ -102,13 +102,13 @@ body.lp-care{
   .fv{position:relative;padding-top:var(--header-h);background:linear-gradient(115deg,#FFFFFF 0%,#FFF8F1 45%,#FFE6D2 100%);overflow:hidden;isolation:isolate;}
   .fv__photo{position:relative;height:300px;margin:0;}
   .fv__photo::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(180deg,rgba(255,248,241,0) 0%,#FFF8F1 100%);pointer-events:none;}
-  .fv__badge{position:absolute;z-index:3;right:8px;bottom:18px;width:150px;aspect-ratio:1.18;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--white);}
+  .fv__badge{position:absolute;z-index:3;right:4px;bottom:14px;width:176px;aspect-ratio:1.18;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--white);}
   .fv__badge-laurel{position:absolute;inset:0;width:100%;height:100%;}
   .fv__badge-glow{position:absolute;inset:14% 16%;border-radius:50%;background:radial-gradient(closest-side,rgba(40,20,5,.55),rgba(40,20,5,0));}
-  .fv__badge-stars{position:relative;display:flex;gap:3px;margin-bottom:2px;}
+  .fv__badge-stars{position:relative;display:flex;gap:3px;margin-bottom:3px;}
   .fv__badge-stars svg{width:12px;height:12px;fill:var(--gold);}
-  .fv__badge-text{position:relative;font-size:11px;font-weight:900;line-height:1.45;letter-spacing:.04em;text-shadow:0 2px 6px rgba(0,0,0,.45);}
-  .fv__badge-text b{display:block;font-size:12.5px;}
+  .fv__badge-text{position:relative;font-size:10px;font-weight:900;line-height:1.5;letter-spacing:.02em;text-shadow:0 2px 6px rgba(0,0,0,.45);}
+  .fv__badge-text b{display:block;margin-top:1px;font-size:11.5px;}
 
   .fv__body{position:relative;z-index:2;padding:4px var(--gutter) 64px;margin-top:-28px;}
   .fv__lead{font-size:15px;font-weight:700;line-height:1.6;color:var(--ink);}
@@ -132,8 +132,8 @@ body.lp-care{
 
   @media (min-width:768px){
     .fv__photo{height:420px;}
-    .fv__badge{width:200px;right:24px;bottom:28px;}
-    .fv__badge-text{font-size:14px;} .fv__badge-text b{font-size:16px;}
+    .fv__badge{width:224px;right:24px;bottom:28px;}
+    .fv__badge-text{font-size:13px;} .fv__badge-text b{font-size:15px;}
     .fv__badge-stars svg{width:16px;height:16px;}
     .fv__label{font-size:40px;}
     .fv__headline{font-size:54px;}
