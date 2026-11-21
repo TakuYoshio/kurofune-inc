@@ -8,7 +8,14 @@ if (!$lp) {
   get_template_part('404');
   return;
 }
-get_header('lp');
+
+// 設定ファイルの 'template' でデザインを切り替える（未指定は造船LPと同じ共通デザイン）
+//   care：header-lp-care.php / parts/lp-care/ / footer-lp-care.php
+$template = isset($lp['template']) ? $lp['template'] : '';
+$parts    = $template ? 'parts/lp-' . $template . '/' : 'parts/lp/';
+$sections = array('fv', 'subcopy', 'problem', 'solution', 'flow', 'price', 'seminar', 'case', 'faq', 'contact');
+
+get_header($template ? 'lp-' . $template : 'lp');
 ?>
   <main class="lp-main">
     <?php if (post_password_required()) : ?>
@@ -21,10 +28,10 @@ get_header('lp');
         </div>
       </section>
     <?php else :
-    foreach (array('fv', 'subcopy', 'problem', 'solution', 'flow', 'price', 'seminar', 'case', 'faq', 'contact') as $section) {
-      get_template_part('parts/lp/' . $section, null, $lp);
+    foreach ($sections as $section) {
+      get_template_part($parts . $section, null, $lp);
     }
     endif;
     ?>
   </main>
-<?php get_footer('lp'); ?>
+<?php get_footer($template ? 'lp-' . $template : 'lp'); ?>
