@@ -1,8 +1,8 @@
 <?php
 /** 業種別LP（介護）ヘッダー */
 $lp = kurofune_get_lp();
-// パスワード保護中（正式公開前）は検索エンジンに載せない
-$lp_protected = (bool) get_post_field('post_password', get_queried_object_id());
+// パスワード保護中（正式公開前）、または設定で noindex => true のときは検索エンジンに載せない
+$lp_protected = (bool) get_post_field('post_password', get_queried_object_id()) || !empty($lp['noindex']);
 $lp_nav = array(
   'problem'  => 'お悩み・課題',
   'solution' => '3つの強み',
