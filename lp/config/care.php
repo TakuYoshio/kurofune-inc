@@ -16,9 +16,9 @@ $img = 'images/lp/care/';
 return array(
   'template' => 'care',
 
-  // 正式公開前は検索エンジンに載せない（公開時に false にする）。
-  // あわせて管理画面でLPの投稿にパスワードを設定し、パスワード付き公開にする
-  'noindex' => true,
+  // 公開中。再び検索エンジンに載せたくないときは true にする
+  // （管理画面でLPの投稿にパスワードを設定した場合も自動で noindex になる）
+  'noindex' => false,
 
   'meta' => array(
     'title'       => '【介護施設向け】特定技能外国人採用なら紹介手数料0円 | KUROFUNE',
