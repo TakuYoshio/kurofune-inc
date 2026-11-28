@@ -77,7 +77,13 @@ function kurofune_is_thanks_page() {
   if (!is_page()) {
     return false;
   }
-  $slug = get_post_field('post_name', get_queried_object_id());
+  return kurofune_is_thanks_slug(get_post_field('post_name', get_queried_object_id()));
+}
+
+/**
+ * サンクスページのスラッグか（thanks と thanks-{業種}）
+ */
+function kurofune_is_thanks_slug($slug) {
   return $slug === 'thanks' || strpos($slug, 'thanks-') === 0;
 }
 
@@ -89,6 +95,33 @@ function kurofune_thanks_template($templates) {
   return $templates;
 }
 add_filter('page_template_hierarchy', 'kurofune_thanks_template');
+
+/* =====================================================================
+ * サイトマップ（/wp-sitemap.xml）
+ * ===================================================================== */
+// サンクスページは noindex なのでサイトマップに載せない
+function kurofune_sitemap_exclude_thanks($args, $post_type) {
+  if ($post_type !== 'page') {
+    return $args;
+  }
+  $exclude = array();
+  foreach (get_pages(array('post_status' => 'publish')) as $page) {
+    if (kurofune_is_thanks_slug($page->post_name)) {
+      $exclude[] = $page->ID;
+    }
+  }
+  if ($exclude) {
+    $args['post__not_in'] = array_merge(isset($args['post__not_in']) ? (array) $args['post__not_in'] : array(), $exclude);
+  }
+  return $args;
+}
+add_filter('wp_sitemaps_posts_query_args', 'kurofune_sitemap_exclude_thanks', 10, 2);
+
+// 投稿者のサイトマップは出さない（管理者のユーザー名が見えてしまうため）
+function kurofune_sitemap_remove_users($provider, $name) {
+  return $name === 'users' ? false : $provider;
+}
+add_filter('wp_sitemaps_add_provider', 'kurofune_sitemap_remove_users', 10, 2);
 
 /* =====================================================================
  * カスタムフィールド（ACF）
